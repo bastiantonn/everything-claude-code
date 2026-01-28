@@ -190,6 +190,7 @@
                     <a href="#workflow" class="nav-link">Workflow</a>
                     <a href="#examples" class="nav-link">Beispiele</a>
                     <a href="#tokens" class="nav-link">Token-Optimierung</a>
+                    <a href="#projects" class="nav-link">Deine Projekte</a>
                 </div>
 
                 <button onclick="toggleDarkMode()" class="btn-secondary px-4 py-2 rounded-lg">
@@ -3999,6 +4000,740 @@ components/user-management/
                                 <li>• Monitoring: Token Usage tracken</li>
                                 <li>• Optimization Reviews: Wöchentlich Context checken</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalized Projects Section -->
+    <section id="projects" class="py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">🚀 Für deine Projekte</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Konkrete Claude Code Workflows basierend auf deinen 7 Production-Projekten
+                </p>
+            </div>
+
+            <!-- Project Overview Cards -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="card p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-3xl">📧</span>
+                        <span class="badge bg-green-600 text-white">✅ Live</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">gmailctl</h3>
+                    <p class="text-sm text-muted-foreground mb-3">
+                        Email Analytics mit ML & Gamification
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-xs badge">Python</span>
+                        <span class="text-xs badge">Next.js</span>
+                        <span class="text-xs badge">ML</span>
+                    </div>
+                </div>
+
+                <div class="card p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-3xl">🛍️</span>
+                        <span class="badge bg-blue-600 text-white">🚀 Phase 2</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">vetsak-retail</h3>
+                    <p class="text-sm text-muted-foreground mb-3">
+                        B2B Commission Platform (Shopify)
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-xs badge">Next.js 15</span>
+                        <span class="text-xs badge">Supabase</span>
+                        <span class="text-xs badge">Shopify</span>
+                    </div>
+                </div>
+
+                <div class="card p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-3xl">🔒</span>
+                        <span class="badge bg-green-600 text-white">✅ Live</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">security-audit</h3>
+                    <p class="text-sm text-muted-foreground mb-3">
+                        Web Security & Performance Scanner
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-xs badge">Node.js</span>
+                        <span class="text-xs badge">OWASP</span>
+                        <span class="text-xs badge">Lighthouse</span>
+                    </div>
+                </div>
+
+                <div class="card p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-3xl">🗺️</span>
+                        <span class="badge bg-green-600 text-white">✅ Live</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">bt-sitemap-xml</h3>
+                    <p class="text-sm text-muted-foreground mb-3">
+                        XML Sitemap Generator (Deep Crawl)
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-xs badge">Next.js 16</span>
+                        <span class="text-xs badge">Puppeteer</span>
+                        <span class="text-xs badge">50k URLs</span>
+                    </div>
+                </div>
+
+                <div class="card p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-3xl">💡</span>
+                        <span class="badge bg-green-600 text-white">✅ PWA</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">bt-ideas</h3>
+                    <p class="text-sm text-muted-foreground mb-3">
+                        Personal Task Manager (Kanban/List)
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-xs badge">Next.js 15</span>
+                        <span class="text-xs badge">Supabase</span>
+                        <span class="text-xs badge">PWA</span>
+                    </div>
+                </div>
+
+                <div class="card p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-3xl">🦄</span>
+                        <span class="badge bg-green-600 text-white">✅ Live</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">unicorn-import</h3>
+                    <p class="text-sm text-muted-foreground mb-3">
+                        YC Companies Directory (5.6k+)
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="text-xs badge">Next.js 16</span>
+                        <span class="text-xs badge">Algolia</span>
+                        <span class="text-xs badge">Fuse.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Overview -->
+            <div class="card p-8 rounded-lg mb-12 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-500/20">
+                <h3 class="text-2xl font-bold mb-6 text-center">Dein Tech Stack</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div>
+                        <p class="font-bold mb-2">Frontend</p>
+                        <ul class="text-sm space-y-1">
+                            <li>• Next.js 15/16</li>
+                            <li>• React 19</li>
+                            <li>• TypeScript</li>
+                            <li>• Tailwind CSS</li>
+                            <li>• shadcn/ui</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-2">Backend</p>
+                        <ul class="text-sm space-y-1">
+                            <li>• Supabase</li>
+                            <li>• Python/FastAPI</li>
+                            <li>• SQLite + Prisma</li>
+                            <li>• PostgreSQL</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-2">Tools</p>
+                        <ul class="text-sm space-y-1">
+                            <li>• Puppeteer</li>
+                            <li>• Scikit-learn</li>
+                            <li>• Recharts</li>
+                            <li>• React Query</li>
+                            <li>• Zustand</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-2">Deploy</p>
+                        <ul class="text-sm space-y-1">
+                            <li>• Vercel</li>
+                            <li>• Docker</li>
+                            <li>• GitHub Actions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project-Specific Workflows -->
+            <div class="space-y-8 mb-12">
+                <h3 class="text-3xl font-bold text-center mb-8">🎯 Konkrete Workflows für deine Projekte</h3>
+
+                <!-- gmailctl -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl">📧</span>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-bold mb-2">gmailctl - Frontend Implementation</h4>
+                            <p class="text-muted-foreground">Status: Backend 100% fertig, Frontend Structure definiert</p>
+                        </div>
+                        <span class="badge badge-primary">High Priority</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6">
+                            <h5 class="font-bold mb-3">🚀 Phase 1: Dashboard Tabs (1 Tag)</h5>
+                            <pre class="text-sm mb-4">/plan
+
+"Implementiere gmailctl Frontend Dashboard mit 3 Tabs:
+
+1. Emails Tab:
+   - Table mit shadcn DataTable + TanStack
+   - Columns: From, Subject, Date, Label, Actions
+   - Sorting, Filtering, Pagination
+   - Bulk Actions (Archive, Delete, Label)
+   - Quick Actions per Row
+
+2. Analytics Tab:
+   - 4 KPI Cards (Total Emails, Unread, Today, This Week)
+   - Charts mit Recharts:
+     * Email Volume Timeline (Last 30 Days)
+     * Top Senders (Bar Chart)
+     * Label Distribution (Pie Chart)
+   - Newsletter Detection Stats (ML Accuracy)
+
+3. Gamification Tab:
+   - Inbox Zero Score (Progress Circle)
+   - Achievements Grid (Unlocked/Locked)
+   - Streaks Calendar
+   - Leaderboard (Multi-account)
+
+Tech:
+- Zustand für Global State
+- React Query für API Calls
+- shadcn/ui Components
+- Server Components wo möglich
+
+API Endpoints existieren bereits (58 endpoints)!"</pre>
+                            <p class="text-sm text-muted-foreground">
+                                Claude implementiert alle 3 Tabs mit vollständiger Funktionalität in ~4-6 Stunden.
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="card p-4">
+                                <h5 class="font-bold mb-2">Phase 2: ML Features (2 Tage)</h5>
+                                <pre class="text-xs">/tdd
+
+"Add ML Newsletter Detection UI:
+- Show prediction confidence
+- Allow user corrections
+- Retrain button with feedback
+- Model metrics display"</pre>
+                            </div>
+                            <div class="card p-4">
+                                <h5 class="font-bold mb-2">Phase 3: Optimization (1 Tag)</h5>
+                                <pre class="text-xs">"Optimize for 50k+ emails:
+- Virtual scrolling
+- Lazy loading
+- Index optimization
+- Caching strategy"</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- vetsak-retail -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl">🛍️</span>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-bold mb-2">vetsak-retail - MVP Development</h4>
+                            <p class="text-muted-foreground">Status: Phase 1-2 in Progress, Phase 3-8 geplant</p>
+                        </div>
+                        <span class="badge badge-primary">Highest Priority</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-6">
+                            <h5 class="font-bold mb-3">🎯 Phase 2: Database + RLS (2-3 Tage)</h5>
+                            <pre class="text-sm mb-4">/plan
+
+"Implementiere vetsak-retail Database Schema + RLS:
+
+Tables (bereits geplant in PROJEKTPLAN.md):
+1. dealers (id, name, email, provisionRate, dealerCode, status)
+2. leads (id, dealerId, name, email, phone, zip, city, product, gdpr)
+3. orders (id, shopifyId, email, orderTotal, orderDate, matchedLeadId)
+4. commissions (id, dealerId, orderId, leadId, amount, status, paidAt)
+5. admin_users (id, email, role, name)
+
+RLS Policies:
+- Dealers können nur ihre eigenen Leads/Commissions sehen
+- Admins sehen alles
+- Public kann nur Leads erstellen
+
+Besonderheit:
+- Test Direct PostgreSQL Connection (PROJEKTPLAN zeigt 95% Success!)
+- UUID für alle IDs
+- created_at, updated_at Timestamps
+- Soft Deletes (deleted_at)
+
+Implementiere:
+1. Prisma Schema
+2. Migrations
+3. RLS Policies
+4. Test Queries mit Direct Connection
+5. Seed Data (10 Test Dealers, 50 Test Leads)"</pre>
+                        </div>
+
+                        <div class="bg-purple-500/10 border border-purple-500/20 rounded-lg p-6">
+                            <h5 class="font-bold mb-3">🔗 Phase 5: Shopify Integration (3-4 Tage)</h5>
+                            <pre class="text-sm">/tdd
+
+"Implementiere Shopify GraphQL Integration:
+
+1. Shopify Admin API Setup:
+   - GraphQL Client (Admin API)
+   - Authentication mit Access Token
+   - Rate Limiting Handler (40 req/sec)
+
+2. Order Sync Service:
+   - Fetch orders since last sync
+   - Transform Shopify → Database schema
+   - Match to Leads (Email → Name+ZIP algorithm)
+   - Calculate Commissions
+
+3. Vercel Cron Job:
+   - /api/cron/sync-orders
+   - Runs alle 15 Minuten
+   - Error handling + Notifications
+   - Logs pro Sync-Run
+
+4. Matching-Logik:
+   - Primary: Email Match (exact)
+   - Fallback: Name + ZIP Match (fuzzy)
+   - Manual Review für unmatched
+
+Test mit:
+- Mock Shopify responses
+- Edge cases (multiple matches, no matches)
+- Commission calculation accuracy"</pre>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="card p-4">
+                                <h5 class="font-bold text-sm mb-2">Phase 3: Lead-Form</h5>
+                                <p class="text-xs text-muted-foreground">Dealer-spezifischer Link mit Pre-filled dealerId</p>
+                            </div>
+                            <div class="card p-4">
+                                <h5 class="font-bold text-sm mb-2">Phase 4: Dealer-Dashboard</h5>
+                                <p class="text-xs text-muted-foreground">Leads, Orders, Commissions, Stats</p>
+                            </div>
+                            <div class="card p-4">
+                                <h5 class="font-bold text-sm mb-2">Phase 7: Admin-Panel</h5>
+                                <p class="text-xs text-muted-foreground">Dealer Management, Manual Matching</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- security-audit -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl">🔒</span>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-bold mb-2">security-audit - Automation & Dashboard</h4>
+                            <p class="text-muted-foreground">Status: Manual Reports, Template vorhanden</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-destructive/10 border border-destructive/20 rounded-lg p-6">
+                                <h5 class="font-bold mb-3">Quick Win: Auto-Remediation (1 Tag)</h5>
+                                <pre class="text-xs mb-3">/plan
+
+"Add Auto-Remediation Suggestions:
+
+Für jedes Critical/High Finding:
+- Generate Code Snippet für Fix
+- Generate CSP Header
+- Generate SRI Hashes
+- Generate HSTS Config
+
+Example Output:
+// Fix: XSS in innerHTML
+- element.innerHTML = userInput
++ element.textContent = userInput
+
+// CSP Header
+Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-...'
+
+Speichern als remediation-[domain].md"</pre>
+                            </div>
+
+                            <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6">
+                                <h5 class="font-bold mb-3">Feature: CI/CD Integration (2 Tage)</h5>
+                                <pre class="text-xs">"Setup GitHub Action:
+
+on: [push, schedule]
+- Run security-audit
+- Generate report
+- Comment on PR if issues
+- Block merge bei Critical
+- Slack notification
+
+Deploy as npm package?"</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bt-sitemap-xml -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl">🗺️</span>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-bold mb-2">bt-sitemap-xml - Performance & Monitoring</h4>
+                            <p class="text-muted-foreground">Status: Live, Optimization möglich</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="card p-6">
+                            <h5 class="font-bold mb-3">Progressive Crawling</h5>
+                            <pre class="text-xs">/plan
+
+"Optimize Crawl Strategy:
+
+1. Start mit robots.txt Sitemaps
+2. Crawl sitemap URLs first (fast!)
+3. Then deep crawl (slower)
+4. Parallel processing (5 workers)
+5. Cache known URLs (Redis?)
+
+Reduces initial wait time von
+15 Min → 2 Min für 10k URLs!"</pre>
+                        </div>
+
+                        <div class="card p-6">
+                            <h5 class="font-bold mb-3">Real-time Monitoring</h5>
+                            <pre class="text-xs">"Add Dashboard Tab:
+
+- Active Jobs (Live Progress)
+- Job History (Last 30 days)
+- Stats per Domain
+- Performance Metrics
+- Error Logs
+
+WebSocket für Live Updates!"</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bt-ideas -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl">💡</span>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-bold mb-2">bt-ideas - Template & Collaboration</h4>
+                            <p class="text-muted-foreground">Status: Mature PWA, extendable</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-6">
+                            <h5 class="font-bold mb-3">💡 Nutze als Template für andere Projekte</h5>
+                            <p class="text-sm text-muted-foreground mb-3">
+                                bt-ideas hat Production-ready Code für PWA Features:
+                            </p>
+                            <ul class="text-sm space-y-1">
+                                <li>• Drag & Drop Reordering (dnd-kit)</li>
+                                <li>• Keyboard Shortcuts (j/k navigation, ?)</li>
+                                <li>• Smart Search mit Autocomplete</li>
+                                <li>• Undo-Toasts (5 Sekunden)</li>
+                                <li>• Empty States mit CTAs</li>
+                                <li>• 5 View Modes (List, Feed, Kanban, Dashboard, Settings)</li>
+                            </ul>
+                        </div>
+
+                        <div class="card p-6">
+                            <h5 class="font-bold mb-3">Feature Idea: Collaboration</h5>
+                            <pre class="text-xs">"Add Team Features:
+
+- Share Ideas mit anderen
+- Comments & Mentions
+- Real-time Updates (Supabase Realtime)
+- Permissions (Owner, Editor, Viewer)
+
+Target: Teams von 2-10 Personen"</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- unicorn-import -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-6">
+                        <span class="text-4xl">🦄</span>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-bold mb-2">unicorn-import - Analytics & Trends</h4>
+                            <p class="text-muted-foreground">Status: Live, Analytics erweiterbar</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="card p-6">
+                            <h5 class="font-bold mb-3">Trend Analysis</h5>
+                            <pre class="text-xs">"Add Insights:
+
+- Batch Cohort Analysis
+  (Success Rate by Batch)
+- Industry Trends
+  (Hot Industries 2024-2026)
+- Technology Stack Trends
+  (Most used tech by successful startups)
+- Funding Stage Distribution
+
+Charts mit Recharts!"</pre>
+                        </div>
+
+                        <div class="card p-6">
+                            <h5 class="font-bold mb-3">Founder Search</h5>
+                            <pre class="text-xs">"Extend Search:
+
+- Add founder filtering
+- Previous Companies
+- Educational Background
+- Location Heatmap
+
+Scrape from YC profiles?"</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Wins -->
+            <div class="card p-8 rounded-lg mb-12 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20">
+                <h3 class="text-2xl font-bold mb-6 text-center">⚡ Quick Wins - Diese Woche umsetzbar</h3>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="bg-background/50 rounded-lg p-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="badge badge-primary">1h</span>
+                                <h4 class="font-bold">gmailctl: Analytics Tab</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground">
+                                4 KPI Cards + 3 Charts implementieren - API existiert bereits!
+                            </p>
+                        </div>
+
+                        <div class="bg-background/50 rounded-lg p-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="badge badge-primary">2h</span>
+                                <h4 class="font-bold">vetsak-retail: Database Schema</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground">
+                                Prisma Schema + Migrations - PROJEKTPLAN ist komplett!
+                            </p>
+                        </div>
+
+                        <div class="bg-background/50 rounded-lg p-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="badge badge-primary">1h</span>
+                                <h4 class="font-bold">security-audit: Auto-Remediation</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground">
+                                Generate Code Snippets für Critical Findings
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-background/50 rounded-lg p-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="badge badge-primary">3h</span>
+                                <h4 class="font-bold">bt-sitemap: Real-time Dashboard</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground">
+                                WebSocket für Live Progress Updates
+                            </p>
+                        </div>
+
+                        <div class="bg-background/50 rounded-lg p-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="badge badge-primary">2h</span>
+                                <h4 class="font-bold">unicorn-import: Batch Analysis</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground">
+                                Success Rate Chart by YC Batch
+                            </p>
+                        </div>
+
+                        <div class="bg-background/50 rounded-lg p-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="badge badge-primary">1h</span>
+                                <h4 class="font-bold">All Projects: GitHub Actions</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground">
+                                CI/CD für Tests + Deployment
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6">
+                    <p class="text-lg font-bold">Total: ~10 Stunden für massive Improvements! 🚀</p>
+                </div>
+            </div>
+
+            <!-- 30-Day Master Plan -->
+            <div class="card p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-6 text-center">📅 30-Tage Master Plan</h3>
+
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
+                            W1
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold mb-2">Woche 1: Foundation & Quick Wins</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="text-sm space-y-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600">•</span>
+                                        <span>gmailctl Analytics Tab implementieren</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600">•</span>
+                                        <span>vetsak-retail Database + RLS</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600">•</span>
+                                        <span>security-audit Auto-Remediation</span>
+                                    </li>
+                                </ul>
+                                <ul class="text-sm space-y-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600">•</span>
+                                        <span>GitHub Actions für alle Projekte</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600">•</span>
+                                        <span>Dokumentation Review & Update</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
+                            W2
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold mb-2">Woche 2: Major Features</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="text-sm space-y-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-600">•</span>
+                                        <span>gmailctl Complete Frontend (3 Tabs)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-600">•</span>
+                                        <span>vetsak-retail Lead-Formular (Phase 3)</span>
+                                    </li>
+                                </ul>
+                                <ul class="text-sm space-y-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-600">•</span>
+                                        <span>bt-sitemap Progressive Crawling</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-600">•</span>
+                                        <span>unicorn-import Trend Analysis</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
+                            W3
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold mb-2">Woche 3: Integration & Testing</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="text-sm space-y-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-purple-600">•</span>
+                                        <span>vetsak-retail Shopify Integration (Phase 5)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-purple-600">•</span>
+                                        <span>gmailctl ML Features UI</span>
+                                    </li>
+                                </ul>
+                                <ul class="text-sm space-y-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-purple-600">•</span>
+                                        <span>E2E Tests für alle Projekte (Playwright)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-purple-600">•</span>
+                                        <span>security-audit CI/CD Integration</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
+                            W4
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold mb-2">Woche 4: Polish & Launch</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="text-sm space-y-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600">•</span>
+                                        <span>vetsak-retail Dealer-Dashboard (Phase 4)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600">•</span>
+                                        <span>Performance Optimization für alle</span>
+                                    </li>
+                                </ul>
+                                <ul class="text-sm space-y-1">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600">•</span>
+                                        <span>Monitoring Setup (Sentry, Analytics)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-600">•</span>
+                                        <span>Documentation finalisieren</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-6 mt-8">
+                    <h4 class="font-bold text-center mb-3">🎯 End-of-Month Goals</h4>
+                    <div class="grid md:grid-cols-3 gap-4 text-center">
+                        <div>
+                            <p class="text-2xl font-bold mb-1">📧</p>
+                            <p class="text-sm font-bold">gmailctl</p>
+                            <p class="text-xs text-muted-foreground">Complete + Deployed</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold mb-1">🛍️</p>
+                            <p class="text-sm font-bold">vetsak-retail</p>
+                            <p class="text-xs text-muted-foreground">MVP (Phase 1-5) Ready</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold mb-1">🔒</p>
+                            <p class="text-sm font-bold">security-audit</p>
+                            <p class="text-xs text-muted-foreground">Automated CI/CD</p>
                         </div>
                     </div>
                 </div>
