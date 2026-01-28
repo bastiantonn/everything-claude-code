@@ -45,6 +45,22 @@ Oder starte direkt mit:
 
 ---
 
+## 🚀 Deine Projekte
+
+Die HTML-Seite enthält konkrete Workflows für deine 7 Production-Projekte:
+
+| Projekt | Status | Tech Stack |
+|---------|--------|-----------|
+| **gmailctl** | 100% Backend, Frontend ready | Python/FastAPI + Next.js + ML |
+| **vetsak-retail** | 25% (Phase 1) | Next.js 15 + Supabase + Shopify |
+| **security-audit** | 100% Operational | Node.js + OWASP + Lighthouse |
+| **bt-sitemap-xml** | 45% MVP | Next.js 16 + Puppeteer + Prisma |
+| **bt-ideas** | 90% Live | Next.js 15 + Supabase PWA |
+| **unicorn-import** | 95% Ready | Next.js 16 + Prisma + 5.6k YC companies |
+| **bt-voicelift** | 10% Validation | Next.js 14 + Retell AI + Claude 3.5 |
+
+---
+
 ## 🔄 Git Workflow
 
 ### Setup: Zwei Remotes
@@ -81,6 +97,7 @@ git push origin main
 | [index.html](./index.html) | Interaktive Guide-Seite | Im Browser öffnen |
 | [START-HIER.md](./START-HIER.md) | Einstieg & Quick Start | 5 Min |
 | [PRAXIS-GUIDE.md](./PRAXIS-GUIDE.md) | Kompletter praktischer Guide | 30 Min |
+| [HOOKS-TERMINAL-GUIDE.md](./HOOKS-TERMINAL-GUIDE.md) | Hooks im Terminal nutzen | 15 Min |
 | [WORKFLOW-PRIVATE-FORK.md](./WORKFLOW-PRIVATE-FORK.md) | Git Workflow | 10 Min |
 | [workflows/shadcn-mvp-workflow.md](./workflows/shadcn-mvp-workflow.md) | 6-Phasen Workflow | 15 Min |
 | [examples/shadcn-komponenten.md](./examples/shadcn-komponenten.md) | Code-Beispiele | Nachschlagen |
