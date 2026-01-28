@@ -24,6 +24,15 @@ node_modules/
 # Personal configs (if any)
 personal/
 private/
+secrets/
+
+# Private session data
+.claude/sessions/*-private.md
+examples/sessions/*-private.md
 
 # Session templates (not committed)
 examples/sessions/*.tmp
+
+# Private credentials
+*-credentials.json
+my-credentials.*
