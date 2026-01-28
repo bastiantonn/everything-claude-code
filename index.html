@@ -191,6 +191,7 @@
                     <a href="#examples" class="nav-link">Beispiele</a>
                     <a href="#tokens" class="nav-link">Token-Optimierung</a>
                     <a href="#projects" class="nav-link">Deine Projekte</a>
+                    <a href="#ideas" class="nav-link">Feature-Ideen</a>
                 </div>
 
                 <button onclick="toggleDarkMode()" class="btn-secondary px-4 py-2 rounded-lg">
@@ -4735,6 +4736,1100 @@ Scrape from YC profiles?"</pre>
                             <p class="text-sm font-bold">security-audit</p>
                             <p class="text-xs text-muted-foreground">Automated CI/CD</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Ideas Section -->
+    <section id="ideas" class="py-20 px-4 bg-muted/50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">💡 5 Konkrete Feature-Ideen pro Projekt</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Umsetzbare Ideen für deine nächsten Features - Ready to implement!
+                </p>
+            </div>
+
+            <!-- gmailctl Ideas -->
+            <div class="card p-8 rounded-lg mb-8">
+                <div class="flex items-start gap-4 mb-6">
+                    <span class="text-4xl">📧</span>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-2">gmailctl - Email Intelligence Features</h3>
+                        <p class="text-muted-foreground">Erweitere deine Email-Analytics mit KI-Features</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Idea 1 -->
+                        <div class="card p-6 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-blue-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🤖</span>
+                                <h4 class="font-bold">1. Smart Reply Generator (ML)</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                KI-generierte Email-Antworten basierend auf deinem Writing-Style
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Analyze your sent emails für Style Learning</li>
+                                    <li>Generate 3 reply suggestions (Short/Medium/Long)</li>
+                                    <li>Tone selector (Professional/Casual/Friendly)</li>
+                                    <li>One-click send oder edit</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">ML Required</span>
+                                <span class="badge">High Impact</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Implement Smart Reply Generator with OpenAI API"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 2 -->
+                        <div class="card p-6 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">📝</span>
+                                <h4 class="font-bold">2. Email Template System</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Wiederverwendbare Templates mit Variables für häufige Emails
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Template Editor mit Variables ({{name}}, {{date}})</li>
+                                    <li>Categories (Sales, Support, Personal)</li>
+                                    <li>Quick Insert via Shortcut (Cmd+T)</li>
+                                    <li>Usage Analytics (most used templates)</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Low Effort</span>
+                                <span class="badge">Quick Win</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/tdd "Add Email Template CRUD with shadcn Form"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 3 -->
+                        <div class="card p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-purple-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🚫</span>
+                                <h4 class="font-bold">3. Smart Auto-Unsubscribe</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Bulk-Unsubscribe von Newslettern die du nie öffnest
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Detect newsletters with ML (already implemented!)</li>
+                                    <li>Show "Never Opened" newsletters</li>
+                                    <li>Bulk select + Auto-unsubscribe via Links</li>
+                                    <li>Keep list of unsubscribed (undo option)</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">Uses existing ML</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Add Auto-Unsubscribe feature for newsletters"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 4 -->
+                        <div class="card p-6 bg-gradient-to-r from-orange-500/10 to-red-500/10 border-orange-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">📊</span>
+                                <h4 class="font-bold">4. Email Insights Dashboard</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Analyze deine Email-Patterns für Produktivität
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Insights:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Best time to send (highest response rate)</li>
+                                    <li>Average response time (per contact)</li>
+                                    <li>Email velocity (emails/hour chart)</li>
+                                    <li>Top contacts by email count</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Low Effort</span>
+                                <span class="badge">Data already there</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Add Insights Tab with charts from existing data"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 5 -->
+                        <div class="card p-6 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border-indigo-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">📅</span>
+                                <h4 class="font-bold">5. Calendar Integration</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Auto-detect Meeting-Requests und sync mit Calendar
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Detect emails with dates/times (NLP)</li>
+                                    <li>Extract meeting details automatically</li>
+                                    <li>One-click "Add to Calendar"</li>
+                                    <li>Google Calendar / Outlook sync</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">High Effort</span>
+                                <span class="badge">NLP Required</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Meeting detection with Chrono.js + Calendar API"</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- vetsak-retail Ideas -->
+            <div class="card p-8 rounded-lg mb-8">
+                <div class="flex items-start gap-4 mb-6">
+                    <span class="text-4xl">🛍️</span>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-2">vetsak-retail - B2B Engagement Features</h3>
+                        <p class="text-muted-foreground">Maximiere Dealer-Engagement und Conversions</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Idea 1 -->
+                        <div class="card p-6 bg-gradient-to-r from-green-500/10 to-teal-500/10 border-green-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">💬</span>
+                                <h4 class="font-bold">1. WhatsApp Notifications</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Instant Dealer-Benachrichtigungen bei neuen Leads
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>WhatsApp Business API Integration</li>
+                                    <li>Instant notification bei neuem Lead</li>
+                                    <li>Lead-Details direkt in Message</li>
+                                    <li>Quick Reply Actions (Call, Email)</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">High Impact</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "WhatsApp Business API für Lead-Notifications"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 2 -->
+                        <div class="card p-6 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-blue-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">📱</span>
+                                <h4 class="font-bold">2. QR-Code Generator</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                In-Store QR-Codes mit Dealer-Link für einfache Lead-Erfassung
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>QR-Code Generator mit Dealer-ID</li>
+                                    <li>Printable Poster (PDF mit Branding)</li>
+                                    <li>Scan Analytics (Scans per Location)</li>
+                                    <li>Custom Landing Page per Dealer</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Low Effort</span>
+                                <span class="badge">Quick Win</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/tdd "QR-Code Generator with qrcode.js + PDF export"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 3 -->
+                        <div class="card p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-purple-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🧮</span>
+                                <h4 class="font-bold">3. Commission Calculator Widget</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Embeddable Widget für Dealer-Websites
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Embeddable iFrame Widget</li>
+                                    <li>Calculate commission by order value</li>
+                                    <li>Show potential earnings</li>
+                                    <li>CTA: "Become a Dealer"</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Low Effort</span>
+                                <span class="badge">Marketing Tool</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Embeddable Commission Calculator Widget"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 4 -->
+                        <div class="card p-6 bg-gradient-to-r from-orange-500/10 to-red-500/10 border-orange-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🏆</span>
+                                <h4 class="font-bold">4. Performance Leaderboard</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Gamification: Top Dealers Ranking mit Rewards
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Monthly/Quarterly/Yearly Rankings</li>
+                                    <li>Metrics: Leads, Conversions, Revenue</li>
+                                    <li>Badges & Achievements</li>
+                                    <li>Exclusive Rewards für Top 10</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">Engagement Boost</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/tdd "Leaderboard with Rankings + Achievements"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 5 -->
+                        <div class="card p-6 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border-indigo-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">📄</span>
+                                <h4 class="font-bold">5. Automated Monthly Reports</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                PDF Reports automatisch per Email an Dealers
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>PDF Generation (Puppeteer/Playwright)</li>
+                                    <li>Branded Template mit vetsak Logo</li>
+                                    <li>Stats: Leads, Conversions, Earnings</li>
+                                    <li>Auto-Email via Vercel Cron (1st of month)</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">Professional Touch</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Monthly PDF Reports with Puppeteer + Email"</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- security-audit Ideas -->
+            <div class="card p-8 rounded-lg mb-8">
+                <div class="flex items-start gap-4 mb-6">
+                    <span class="text-4xl">🔒</span>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-2">security-audit - Enterprise Features</h3>
+                        <p class="text-muted-foreground">Von Manual Reports zu SaaS Platform</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Idea 1 -->
+                        <div class="card p-6 bg-gradient-to-r from-red-500/10 to-orange-500/10 border-red-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🔄</span>
+                                <h4 class="font-bold">1. Continuous Monitoring</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Scheduled Scans + Alerts bei neuen Vulnerabilities
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Scheduled Scans (Daily/Weekly/Monthly)</li>
+                                    <li>Change Detection (New issues alert)</li>
+                                    <li>Email/Slack notifications</li>
+                                    <li>Historical Trend Charts</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">High Effort</span>
+                                <span class="badge">SaaS Feature</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Vercel Cron + Alert System + Dashboard"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 2 -->
+                        <div class="card p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-purple-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🗃️</span>
+                                <h4 class="font-bold">2. CVE Database Integration</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Lookup bekannte Vulnerabilities in detected Libraries
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Detect JS Libraries (versions)</li>
+                                    <li>CVE Lookup via NVD API</li>
+                                    <li>Severity Scoring (CVSS)</li>
+                                    <li>Patch Recommendations</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">High Value</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "CVE Lookup with NVD API + Wappalyzer"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 3 -->
+                        <div class="card p-6 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-blue-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">⚔️</span>
+                                <h4 class="font-bold">3. Competitor Comparison</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Benchmark deine Security vs. Competitors
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Add competitor domains</li>
+                                    <li>Side-by-side comparison</li>
+                                    <li>Security Score Ranking</li>
+                                    <li>Shared weaknesses detection</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Low Effort</span>
+                                <span class="badge">Marketing Tool</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Multi-domain comparison dashboard"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 4 -->
+                        <div class="card p-6 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🏷️</span>
+                                <h4 class="font-bold">4. White-Label Reports</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Branded Reports für Agencies/Reseller
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Custom Logo Upload</li>
+                                    <li>Custom Color Scheme</li>
+                                    <li>Agency Contact Info</li>
+                                    <li>Remove "Powered by" Footer</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">B2B Revenue</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "White-label config + PDF branding"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 5 -->
+                        <div class="card p-6 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border-indigo-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🇪🇺</span>
+                                <h4 class="font-bold">5. GDPR Compliance Checker</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Check Cookie Consent, Privacy Policy, DSGVO
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Checks:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Cookie Banner Detection</li>
+                                    <li>Privacy Policy Link (Impressum)</li>
+                                    <li>GDPR-compliant forms</li>
+                                    <li>Data Processing Agreement check</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">EU Market</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "GDPR Compliance checker module"</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- bt-sitemap-xml Ideas -->
+            <div class="card p-8 rounded-lg mb-8">
+                <div class="flex items-start gap-4 mb-6">
+                    <span class="text-4xl">🗺️</span>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-2">bt-sitemap-xml - SEO Intelligence</h3>
+                        <p class="text-muted-foreground">Von Sitemap Generator zu SEO Suite</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Idea 1 -->
+                        <div class="card p-6 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-blue-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🔔</span>
+                                <h4 class="font-bold">1. Change Detection & Alerts</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Monitor Websites für neue/removed Pages
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Daily/Weekly Re-Crawl</li>
+                                    <li>Diff Detection (New, Changed, Removed)</li>
+                                    <li>Email Alerts für Changes</li>
+                                    <li>Historical Sitemap Snapshots</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">Monitoring Feature</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Change Detection with Vercel Cron + Diff"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 2 -->
+                        <div class="card p-6 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">💡</span>
+                                <h4 class="font-bold">2. SEO Recommendations</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Analyze Meta Tags, Headers, Content Quality
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Checks:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Missing Meta Descriptions</li>
+                                    <li>Duplicate Title Tags</li>
+                                    <li>H1 Tag Issues</li>
+                                    <li>Image Alt Text missing</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">High Value</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "SEO Analyzer with Cheerio + Recommendations"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 3 -->
+                        <div class="card p-6 bg-gradient-to-r from-red-500/10 to-orange-500/10 border-red-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🔗</span>
+                                <h4 class="font-bold">3. Broken Link Checker</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Detect 404s und Broken External Links
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Check all internal links (404 detection)</li>
+                                    <li>Check external links (dead domains)</li>
+                                    <li>Redirect chains detection</li>
+                                    <li>Report mit Fix suggestions</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">High Effort</span>
+                                <span class="badge">SEO Critical</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Link Checker with axios + parallel requests"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 4 -->
+                        <div class="card p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-purple-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🖼️</span>
+                                <h4 class="font-bold">4. Image Optimization Checker</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Detect oversized Images, missing WebP
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Checks:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Images > 500KB</li>
+                                    <li>Missing WebP alternatives</li>
+                                    <li>Missing width/height attributes</li>
+                                    <li>Lazy loading recommendations</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">Performance</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Image Optimization Analyzer"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 5 -->
+                        <div class="card p-6 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border-indigo-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">⚔️</span>
+                                <h4 class="font-bold">5. Competitor Sitemap Analysis</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Compare Content Coverage vs. Competitors
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Analysis:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Crawl competitor sitemaps</li>
+                                    <li>Content Gap Analysis</li>
+                                    <li>URL Structure Comparison</li>
+                                    <li>Topic Coverage Heatmap</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">High Effort</span>
+                                <span class="badge">Strategic Feature</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Multi-domain analysis + Gap detection"</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- bt-ideas Ideas -->
+            <div class="card p-8 rounded-lg mb-8">
+                <div class="flex items-start gap-4 mb-6">
+                    <span class="text-4xl">💡</span>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-2">bt-ideas - Productivity Boost</h3>
+                        <p class="text-muted-foreground">Von Personal Tool zu Team Collaboration</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Idea 1 -->
+                        <div class="card p-6 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-blue-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🎤</span>
+                                <h4 class="font-bold">1. Voice Input Quick Capture</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Spracheingabe für schnelle Idea-Erfassung
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Web Speech API (Browser-native)</li>
+                                    <li>Push-to-Talk Button (Spacebar)</li>
+                                    <li>Auto-transcribe to text</li>
+                                    <li>Quick Add to bt-ideas</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Low Effort</span>
+                                <span class="badge">Mobile-first</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Voice Input with Web Speech API"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 2 -->
+                        <div class="card p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-purple-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🤖</span>
+                                <h4 class="font-bold">2. AI-powered Prioritization</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                KI schlägt Priority basierend auf Kontext vor
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Analyze task description (NLP)</li>
+                                    <li>Suggest Priority (Low/Medium/High)</li>
+                                    <li>Suggest Due Date based on urgency</li>
+                                    <li>Auto-categorize by Project</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">AI Required</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "AI Prioritization with OpenAI API"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 3 -->
+                        <div class="card p-6 bg-gradient-to-r from-red-500/10 to-orange-500/10 border-red-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">⏱️</span>
+                                <h4 class="font-bold">3. Pomodoro Timer Integration</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Time-Tracking direkt im Task Manager
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Start Pomodoro für Task (25 Min)</li>
+                                    <li>Break Timer (5 Min)</li>
+                                    <li>Track time spent per Task</li>
+                                    <li>Weekly Time Report</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Low Effort</span>
+                                <span class="badge">Productivity</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/tdd "Pomodoro Timer Component + Tracking"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 4 -->
+                        <div class="card p-6 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">📊</span>
+                                <h4 class="font-bold">4. Weekly/Monthly Reports</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Auto-generated Progress Reports
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Reports:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Tasks completed (by Project)</li>
+                                    <li>Time spent (if Pomodoro enabled)</li>
+                                    <li>Progress Charts (Recharts)</li>
+                                    <li>Email Summary (weekly digest)</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">Insights</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Reports Dashboard + Email Digest"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 5 -->
+                        <div class="card p-6 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border-indigo-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">👥</span>
+                                <h4 class="font-bold">5. Shared Workspaces</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Team Collaboration (2-10 Users)
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Invite Team Members (email)</li>
+                                    <li>Shared Projects & Tasks</li>
+                                    <li>Real-time Updates (Supabase Realtime)</li>
+                                    <li>Permissions (Owner/Editor/Viewer)</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">High Effort</span>
+                                <span class="badge">Team Feature</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Team Workspaces with Supabase RLS"</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- unicorn-import Ideas -->
+            <div class="card p-8 rounded-lg mb-8">
+                <div class="flex items-start gap-4 mb-6">
+                    <span class="text-4xl">🦄</span>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-2">unicorn-import - Startup Intelligence</h3>
+                        <p class="text-muted-foreground">Von Directory zu Analytics Platform</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Idea 1 -->
+                        <div class="card p-6 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-blue-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">📈</span>
+                                <h4 class="font-bold">1. Funding Timeline Visualization</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Interactive Timeline für Funding Rounds
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Scrape Crunchbase/TechCrunch für Funding</li>
+                                    <li>Timeline Chart (Seed → Series A → B → C)</li>
+                                    <li>Amount per Round</li>
+                                    <li>Investors per Round</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">High Effort</span>
+                                <span class="badge">Data Scraping</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Funding Timeline with Crunchbase API"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 2 -->
+                        <div class="card p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-purple-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🕸️</span>
+                                <h4 class="font-bold">2. Founder Network Graph</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Visualize Connections zwischen Founders
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Previous Companies (Serial Entrepreneurs)</li>
+                                    <li>Shared Investors</li>
+                                    <li>Educational Background (Stanford/MIT)</li>
+                                    <li>Network Graph Visualization (D3.js)</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">High Effort</span>
+                                <span class="badge">Complex Viz</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Founder Network with D3.js + Scraping"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 3 -->
+                        <div class="card p-6 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">💻</span>
+                                <h4 class="font-bold">3. Technology Trend Analysis</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Hot Tech Stacks bei erfolgreichen Startups
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Analysis:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Most used technologies (bereits detected!)</li>
+                                    <li>Trend by Batch (2020-2026)</li>
+                                    <li>Tech Stack by Industry</li>
+                                    <li>Success Rate by Stack</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">Data already there</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Tech Trend Charts with existing data"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 4 -->
+                        <div class="card p-6 bg-gradient-to-r from-orange-500/10 to-red-500/10 border-orange-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🎯</span>
+                                <h4 class="font-bold">4. Exit Prediction Score (ML)</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Predict Success/Exit Wahrscheinlichkeit
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">ML Model:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Features: Batch, Industry, Team Size, Founded</li>
+                                    <li>Train on IPO/Acquired companies</li>
+                                    <li>Predict Score (0-100%)</li>
+                                    <li>Show key factors für Score</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">High Effort</span>
+                                <span class="badge">ML Required</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Exit Prediction Model with Scikit-learn"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 5 -->
+                        <div class="card p-6 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border-indigo-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🔍</span>
+                                <h4 class="font-bold">5. Similar Companies Recommendation</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                "Companies like X" - Recommendation Engine
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Algorithm:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Similarity by Industry + Technologies</li>
+                                    <li>Batch proximity (similar time)</li>
+                                    <li>Team size similarity</li>
+                                    <li>Location proximity</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">User Engagement</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Recommendation Engine with cosine similarity"</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- bt-voicelift Ideas -->
+            <div class="card p-8 rounded-lg">
+                <div class="flex items-start gap-4 mb-6">
+                    <span class="text-4xl">🎤</span>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold mb-2">bt-voicelift - Voice/Audio Features</h3>
+                        <p class="text-muted-foreground">Keine Docs gefunden - Generische Voice-App Ideen</p>
+                    </div>
+                    <span class="badge bg-orange-600 text-white">⚠️ TBD</span>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Idea 1 -->
+                        <div class="card p-6 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-blue-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🎙️</span>
+                                <h4 class="font-bold">1. Speech-to-Text (Whisper)</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                High-Quality Transcription mit OpenAI Whisper
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Upload Audio (MP3, WAV, M4A)</li>
+                                    <li>Whisper API Integration</li>
+                                    <li>Speaker Diarization</li>
+                                    <li>Export as Text/SRT</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">API Integration</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Whisper API Integration + File Upload"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 2 -->
+                        <div class="card p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-purple-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🗣️</span>
+                                <h4 class="font-bold">2. Voice Commands</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Hands-Free Control mit Voice Commands
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Commands:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>"Play", "Pause", "Stop"</li>
+                                    <li>"Next", "Previous"</li>
+                                    <li>"Volume up/down"</li>
+                                    <li>Custom Commands (wake word)</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">UX Feature</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Voice Commands with Web Speech API"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 3 -->
+                        <div class="card p-6 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">📝</span>
+                                <h4 class="font-bold">3. Audio Transcription + Summary</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Transcribe + AI-Summary für lange Recordings
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Whisper Transcription</li>
+                                    <li>AI Summary (OpenAI GPT-4)</li>
+                                    <li>Key Points Extraction</li>
+                                    <li>Action Items Detection</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">High Effort</span>
+                                <span class="badge">AI Required</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Transcription + AI Summary Pipeline"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 4 -->
+                        <div class="card p-6 bg-gradient-to-r from-orange-500/10 to-red-500/10 border-orange-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🌍</span>
+                                <h4 class="font-bold">4. Multi-Language Support</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Auto-detect Language + Translate
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Auto Language Detection</li>
+                                    <li>Translate Transcription</li>
+                                    <li>100+ Languages (DeepL API)</li>
+                                    <li>Original + Translation side-by-side</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">Medium Effort</span>
+                                <span class="badge">Global Reach</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Language Detection + DeepL Translation"</pre>
+                            </div>
+                        </div>
+
+                        <!-- Idea 5 -->
+                        <div class="card p-6 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border-indigo-500/20">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-2xl">🎭</span>
+                                <h4 class="font-bold">5. Voice Cloning / TTS</h4>
+                            </div>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Clone Voice oder Text-to-Speech Generation
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p class="font-medium">Features:</p>
+                                <ul class="list-disc list-inside text-muted-foreground space-y-1">
+                                    <li>Voice Sample Upload (30 Sekunden)</li>
+                                    <li>ElevenLabs / PlayHT Integration</li>
+                                    <li>Generate Speech from Text</li>
+                                    <li>Voice Library (save clones)</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4">
+                                <span class="badge badge-primary">High Effort</span>
+                                <span class="badge">Advanced Feature</span>
+                            </div>
+                            <div class="mt-3">
+                                <pre class="text-xs">/plan "Voice Cloning with ElevenLabs API"</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-500/10 border border-orange-500/20 rounded-lg p-6 mt-6">
+                        <p class="text-sm text-muted-foreground">
+                            <strong>⚠️ Hinweis:</strong> Für bt-voicelift wurde keine Dokumentation gefunden.
+                            Die obigen Ideen sind generische Voice/Audio Features. Sobald mehr über das Projekt bekannt ist,
+                            können spezifischere Ideen entwickelt werden.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary CTA -->
+            <div class="card p-8 rounded-lg bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-500/20 text-center">
+                <h3 class="text-2xl font-bold mb-4">🚀 35 Feature-Ideen Ready to Implement!</h3>
+                <p class="text-lg text-muted-foreground mb-6">
+                    Jede Idee mit konkretem /plan oder /tdd Prompt - Copy & Paste in Claude!
+                </p>
+                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                        <p class="font-bold mb-1">Quick Wins</p>
+                        <p class="text-muted-foreground">12 Features < 2h Aufwand</p>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-1">Medium</p>
+                        <p class="text-muted-foreground">15 Features 2-5h Aufwand</p>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-1">Advanced</p>
+                        <p class="text-muted-foreground">8 Features 1-2 Tage Aufwand</p>
                     </div>
                 </div>
             </div>
