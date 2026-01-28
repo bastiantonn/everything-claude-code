@@ -182,9 +182,14 @@
                 <div class="hidden md:flex items-center gap-6">
                     <a href="#start" class="nav-link">Start</a>
                     <a href="#commands" class="nav-link">Commands</a>
+                    <a href="#agents" class="nav-link">Agents</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#hooks" class="nav-link">Hooks</a>
+                    <a href="#mcps" class="nav-link">MCPs</a>
                     <a href="#shadcn" class="nav-link">Shadcn</a>
                     <a href="#workflow" class="nav-link">Workflow</a>
                     <a href="#examples" class="nav-link">Beispiele</a>
+                    <a href="#tokens" class="nav-link">Token-Optimierung</a>
                 </div>
 
                 <button onclick="toggleDarkMode()" class="btn-secondary px-4 py-2 rounded-lg">
@@ -219,7 +224,10 @@
                     <span class="badge">TDD</span>
                     <span class="badge">TypeScript</span>
                     <span class="badge">Next.js</span>
-                    <span class="badge">Private Fork</span>
+                    <span class="badge">Agents</span>
+                    <span class="badge">Skills</span>
+                    <span class="badge">Hooks</span>
+                    <span class="badge">MCPs</span>
                 </div>
             </div>
         </div>
@@ -236,7 +244,7 @@
                     <h3 class="text-xl font-bold">1. Feature planen</h3>
                     <pre class="text-sm">/plan</pre>
                     <p class="text-sm text-muted-foreground">
-                        Claude analysiert deinen Code und erstellt einen detaillierten Plan
+                        Claude analysiert deinen Code und erstellt einen detaillierten Plan mit shadcn Components
                     </p>
                 </div>
 
@@ -245,7 +253,7 @@
                     <h3 class="text-xl font-bold">2. Mit Tests bauen</h3>
                     <pre class="text-sm">/tdd</pre>
                     <p class="text-sm text-muted-foreground">
-                        Erst Tests, dann Code. Garantiert 80%+ Coverage
+                        Erst Tests, dann Code. Garantiert 80%+ Coverage mit automatischer Verifikation
                     </p>
                 </div>
 
@@ -254,14 +262,14 @@
                     <h3 class="text-xl font-bold">3. Code Review</h3>
                     <pre class="text-sm">/code-review</pre>
                     <p class="text-sm text-muted-foreground">
-                        Security, Performance, Best Practices automatisch prüfen
+                        Security, Performance, Best Practices automatisch prüfen vor jedem Commit
                     </p>
                 </div>
             </div>
 
             <div class="card p-8 rounded-lg">
                 <h3 class="text-2xl font-bold mb-4">Der MVP-Workflow</h3>
-                <div class="flex flex-wrap gap-2 items-center text-lg">
+                <div class="flex flex-wrap gap-2 items-center text-lg mb-4">
                     <span class="badge-primary badge">/plan</span>
                     <span>→</span>
                     <span class="badge-primary badge">/tdd</span>
@@ -272,296 +280,2512 @@
                     <span>→</span>
                     <span class="font-bold">🎉 Fertig!</span>
                 </div>
+                <p class="text-sm text-muted-foreground">
+                    Mit Agents, Skills und Hooks automatisiert. Von der Idee zum Production-Ready Code in unter 60 Minuten.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Commands Section -->
+    <!-- Commands Section - MASSIV ERWEITERT -->
     <section id="commands" class="py-20 px-4">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold mb-12 text-center">🎯 Die wichtigsten Commands</h2>
+            <h2 class="text-4xl font-bold mb-4 text-center">🎯 Alle Commands im Detail</h2>
+            <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                Commands sind vorkonfigurierte Workflows, die Agents mit spezifischen Skills kombinieren.
+                Jeder Command löst eine bestimmte Aufgabe optimal.
+            </p>
 
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="card p-6 rounded-lg space-y-3">
+                <!-- /plan Command -->
+                <div class="card p-6 rounded-lg space-y-4">
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl">📋</span>
+                        <span class="text-3xl">📋</span>
                         <div>
-                            <h3 class="text-lg font-bold">/plan</h3>
-                            <p class="text-sm text-muted-foreground">Feature Planning</p>
+                            <h3 class="text-xl font-bold">/plan</h3>
+                            <p class="text-sm text-muted-foreground">Feature Planning Agent</p>
                         </div>
                     </div>
-                    <p class="text-sm">
-                        Analysiert deine Architektur, schlägt shadcn Components vor, erstellt Step-by-Step Plan
-                    </p>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Was macht der Command?</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>Analysiert bestehende Codebase-Architektur</li>
+                            <li>Identifiziert wiederverwendbare Patterns</li>
+                            <li>Schlägt passende shadcn Components vor</li>
+                            <li>Erstellt detaillierten Step-by-Step Plan</li>
+                            <li>Priorisiert nach Dependencies</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Typischer Output:</p>
+                        <pre class="text-xs">## Implementation Plan
+- Phase 1: Database Schema
+- Phase 2: API Routes
+- Phase 3: UI Components
+- Phase 4: Integration Tests
+- Risks & Mitigations</pre>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Agent: Planner</span>
+                        <span class="badge">Model: Opus</span>
+                        <span class="badge">Tools: Read, Grep, Glob</span>
+                    </div>
                     <div class="pt-2">
-                        <span class="badge">Vor jedem Feature</span>
+                        <span class="badge-primary badge">Vor jedem Feature</span>
                     </div>
                 </div>
 
-                <div class="card p-6 rounded-lg space-y-3">
+                <!-- /tdd Command -->
+                <div class="card p-6 rounded-lg space-y-4">
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl">🧪</span>
+                        <span class="text-3xl">🧪</span>
                         <div>
-                            <h3 class="text-lg font-bold">/tdd</h3>
+                            <h3 class="text-xl font-bold">/tdd</h3>
                             <p class="text-sm text-muted-foreground">Test-Driven Development</p>
                         </div>
                     </div>
-                    <p class="text-sm">
-                        Schreibt erst Tests, dann Code. Verifiziert dass alles grün ist. 80%+ Coverage garantiert.
-                    </p>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Der TDD-Zyklus:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>RED: Tests schreiben (müssen fehlschlagen)</li>
+                            <li>GREEN: Minimale Implementation</li>
+                            <li>REFACTOR: Code verbessern</li>
+                            <li>Verifiziert 80%+ Coverage automatisch</li>
+                            <li>Führt Tests aus und zeigt Ergebnisse</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Test-Typen:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-xs badge">Unit Tests</span>
+                            <span class="text-xs badge">Integration Tests</span>
+                            <span class="text-xs badge">E2E Tests</span>
+                            <span class="text-xs badge">Coverage Report</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Agent: TDD Guide</span>
+                        <span class="badge">Model: Opus</span>
+                        <span class="badge">Coverage: 80%+</span>
+                    </div>
                     <div class="pt-2">
-                        <span class="badge">Bei jedem Feature</span>
+                        <span class="badge-primary badge">Bei jedem Feature</span>
                     </div>
                 </div>
 
-                <div class="card p-6 rounded-lg space-y-3">
+                <!-- /code-review Command -->
+                <div class="card p-6 rounded-lg space-y-4">
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl">🔍</span>
+                        <span class="text-3xl">🔍</span>
                         <div>
-                            <h3 class="text-lg font-bold">/code-review</h3>
-                            <p class="text-sm text-muted-foreground">Automatisches Review</p>
+                            <h3 class="text-xl font-bold">/code-review</h3>
+                            <p class="text-sm text-muted-foreground">Automatisches Code Review</p>
                         </div>
                     </div>
-                    <p class="text-sm">
-                        Prüft Security, Performance, Best Practices, Type Safety, Accessibility
-                    </p>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Review-Kategorien:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>CRITICAL: Security Issues (SQL Injection, XSS)</li>
+                            <li>HIGH: Code Quality (Duplication, Complexity)</li>
+                            <li>MEDIUM: Performance (O(n²), Missing Cache)</li>
+                            <li>LOW: Best Practices (Naming, Comments)</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Prüft automatisch:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-xs badge">Type Safety</span>
+                            <span class="text-xs badge">Error Handling</span>
+                            <span class="text-xs badge">Accessibility</span>
+                            <span class="text-xs badge">Test Coverage</span>
+                            <span class="text-xs badge">Secrets Detection</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Agent: Code Reviewer</span>
+                        <span class="badge">Model: Opus</span>
+                    </div>
                     <div class="pt-2">
-                        <span class="badge">Vor jedem Commit</span>
+                        <span class="badge-primary badge">Vor jedem Commit</span>
                     </div>
                 </div>
 
-                <div class="card p-6 rounded-lg space-y-3">
+                <!-- /security-review Command -->
+                <div class="card p-6 rounded-lg space-y-4">
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl">🔧</span>
+                        <span class="text-3xl">🔒</span>
                         <div>
-                            <h3 class="text-lg font-bold">/build-fix</h3>
-                            <p class="text-sm text-muted-foreground">Build Errors fixen</p>
+                            <h3 class="text-xl font-bold">/security-review</h3>
+                            <p class="text-sm text-muted-foreground">Security Vulnerability Scanner</p>
                         </div>
                     </div>
-                    <p class="text-sm">
-                        Führt Build aus, analysiert Errors, findet Root Cause, fixt automatisch
-                    </p>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">OWASP Top 10 Checks:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>Injection (SQL, NoSQL, Command)</li>
+                            <li>Broken Authentication</li>
+                            <li>Sensitive Data Exposure</li>
+                            <li>XSS & CSRF Protection</li>
+                            <li>Dependency Vulnerabilities (npm audit)</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Spezial-Checks:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-xs badge">Hardcoded Secrets</span>
+                            <span class="text-xs badge">Rate Limiting</span>
+                            <span class="text-xs badge">SSRF Prevention</span>
+                            <span class="text-xs badge">Input Validation</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Agent: Security Reviewer</span>
+                        <span class="badge">Model: Opus</span>
+                    </div>
                     <div class="pt-2">
-                        <span class="badge">Bei Build-Fehlern</span>
+                        <span class="badge-primary badge">Bei API/Auth Changes</span>
                     </div>
                 </div>
 
-                <div class="card p-6 rounded-lg space-y-3">
+                <!-- /build-fix Command -->
+                <div class="card p-6 rounded-lg space-y-4">
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl">🧹</span>
+                        <span class="text-3xl">🔧</span>
                         <div>
-                            <h3 class="text-lg font-bold">/refactor-clean</h3>
-                            <p class="text-sm text-muted-foreground">Dead Code entfernen</p>
+                            <h3 class="text-xl font-bold">/build-fix</h3>
+                            <p class="text-sm text-muted-foreground">Build Error Resolver</p>
                         </div>
                     </div>
-                    <p class="text-sm">
-                        Entfernt ungenutzte Komponenten, console.logs, doppelten Code, leere Interfaces
-                    </p>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Workflow:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>Führt Build aus (npm run build)</li>
+                            <li>Sammelt ALLE TypeScript/ESLint Errors</li>
+                            <li>Kategorisiert nach Error-Type</li>
+                            <li>Fixt mit minimalen Diffs</li>
+                            <li>Re-Build zur Verifikation</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Typische Fixes:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-xs badge">Type Annotations</span>
+                            <span class="text-xs badge">Null Checks</span>
+                            <span class="text-xs badge">Import Errors</span>
+                            <span class="text-xs badge">Generic Constraints</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Agent: Build Error Resolver</span>
+                        <span class="badge">Model: Opus</span>
+                    </div>
                     <div class="pt-2">
-                        <span class="badge">Vor Release</span>
+                        <span class="badge-primary badge">Bei Build-Fehlern</span>
                     </div>
                 </div>
 
-                <div class="card p-6 rounded-lg space-y-3">
+                <!-- /refactor-clean Command -->
+                <div class="card p-6 rounded-lg space-y-4">
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl">🎭</span>
+                        <span class="text-3xl">🧹</span>
                         <div>
-                            <h3 class="text-lg font-bold">/e2e</h3>
-                            <p class="text-sm text-muted-foreground">E2E Tests generieren</p>
+                            <h3 class="text-xl font-bold">/refactor-clean</h3>
+                            <p class="text-sm text-muted-foreground">Dead Code Remover</p>
                         </div>
                     </div>
-                    <p class="text-sm">
-                        Generiert Playwright E2E Tests für User Flows, automatisiert komplette Szenarien
-                    </p>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Entfernt automatisch:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>Ungenutzte Komponenten & Functions</li>
+                            <li>console.log Statements</li>
+                            <li>Doppelten/Dead Code</li>
+                            <li>Leere Interfaces & Types</li>
+                            <li>Unused Imports</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Code Quality Improvements:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-xs badge">DRY Principle</span>
+                            <span class="text-xs badge">KISS</span>
+                            <span class="text-xs badge">Immutability</span>
+                            <span class="text-xs badge">Type Safety</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Agent: Refactor Cleaner</span>
+                        <span class="badge">Model: Opus</span>
+                    </div>
                     <div class="pt-2">
-                        <span class="badge">Für kritische Flows</span>
+                        <span class="badge-primary badge">Vor Release</span>
+                    </div>
+                </div>
+
+                <!-- /e2e Command -->
+                <div class="card p-6 rounded-lg space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-3xl">🎭</span>
+                        <div>
+                            <h3 class="text-xl font-bold">/e2e</h3>
+                            <p class="text-sm text-muted-foreground">E2E Test Generator</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Generiert Tests für:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>Komplette User Flows (Login → Action → Success)</li>
+                            <li>Kritische Szenarien (Payment, Auth)</li>
+                            <li>Browser Automation (Playwright)</li>
+                            <li>Screenshots & Videos on Failure</li>
+                            <li>Trace für Debugging</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Features:</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-xs badge">Page Object Model</span>
+                            <span class="text-xs badge">Flaky Test Detection</span>
+                            <span class="text-xs badge">Artifact Upload</span>
+                            <span class="text-xs badge">CI/CD Ready</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Agent: E2E Runner</span>
+                        <span class="badge">Model: Opus</span>
+                    </div>
+                    <div class="pt-2">
+                        <span class="badge-primary badge">Für kritische Flows</span>
+                    </div>
+                </div>
+
+                <!-- /doc-update Command -->
+                <div class="card p-6 rounded-lg space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-3xl">📝</span>
+                        <div>
+                            <h3 class="text-xl font-bold">/doc-update</h3>
+                            <p class="text-sm text-muted-foreground">Documentation Updater</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-sm font-medium">Aktualisiert automatisch:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>README.md mit neuen Features</li>
+                            <li>API Dokumentation</li>
+                            <li>JSDoc Comments für Public APIs</li>
+                            <li>Changelog mit Versioning</li>
+                            <li>Setup-Anleitungen</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge">Agent: Doc Updater</span>
+                        <span class="badge">Model: Sonnet</span>
+                    </div>
+                    <div class="pt-2">
+                        <span class="badge-primary badge">Nach großen Features</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-lg mt-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-500/20">
+                <h3 class="text-2xl font-bold mb-4">💡 Pro-Tipp: Commands kombinieren</h3>
+                <p class="text-sm text-muted-foreground mb-4">
+                    Commands können in Workflows kombiniert werden. Beispiel für ein neues Feature:
+                </p>
+                <pre class="text-sm">1. /plan → Detaillierter Plan erstellen
+2. /tdd → Feature mit Tests implementieren
+3. /code-review → Qualität sicherstellen
+4. /security-review → Security checken
+5. /build-fix → Build grün machen
+6. /e2e → E2E Tests für kritische Flows
+7. /doc-update → Doku aktualisieren
+8. "Commit die Changes" → Done! 🎉</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agents Section - NEU & SEHR DETAILLIERT -->
+    <section id="agents" class="py-20 px-4 bg-muted/50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-bold mb-4 text-center">🤖 Alle Agents im Detail</h2>
+            <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                Agents sind spezialisierte KI-Assistenten mit spezifischen Rollen, Tools und Models.
+                Sie werden automatisch aktiviert oder können manuell aufgerufen werden.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Planner Agent -->
+                <div class="card p-8 rounded-lg space-y-4">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl">📋</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Planner Agent</h3>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Expert planning specialist für komplexe Features und Refactorings
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-sm font-bold mb-1">Wann nutzen?</p>
+                            <p class="text-sm text-muted-foreground">
+                                Vor jedem neuen Feature, größeren Refactoring oder architektonischen Änderungen
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Was macht der Agent?</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Analysiert Requirements komplett</li>
+                                <li>Reviewt Codebase-Architektur</li>
+                                <li>Identifiziert Dependencies</li>
+                                <li>Erstellt Step-by-Step Implementation Plan</li>
+                                <li>Berücksichtigt Edge Cases & Risks</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Tools:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">Read</span>
+                                <span class="text-xs badge">Grep</span>
+                                <span class="text-xs badge">Glob</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Model:</p>
+                            <span class="badge-primary badge">Claude Opus 4.5</span>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Beispiel-Prompt:</p>
+                            <pre class="text-xs">"Erstelle einen Settings Panel mit:
+- Tabs für Profile, Notifications, Billing
+- Form mit Zod Validation
+- Toast Notifications
+- Data Table für Billing History"</pre>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Typischer Output:</p>
+                            <pre class="text-xs">## Implementation Plan
+
+### Phase 1: Database Schema
+1. Create settings table (settings.sql)
+2. Add RLS policies
+
+### Phase 2: API Routes
+1. GET /api/settings
+2. PATCH /api/settings/:id
+
+### Phase 3: UI Components
+1. SettingsLayout (Tabs)
+2. ProfileForm (Form + Zod)
+3. BillingTable (DataTable)
+
+### Testing Strategy
+- Unit: Form validation
+- Integration: API endpoints
+- E2E: Complete settings flow
+
+### Risks
+- Migration complexity: MEDIUM
+  Mitigation: Staged rollout</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TDD Guide Agent -->
+                <div class="card p-8 rounded-lg space-y-4">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl">🧪</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">TDD Guide Agent</h3>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Test-Driven Development Specialist mit 80%+ Coverage Enforcement
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-sm font-bold mb-1">Wann nutzen?</p>
+                            <p class="text-sm text-muted-foreground">
+                                Bei JEDEM Feature, Bug-Fix oder Refactoring. Tests-first ist Pflicht!
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Was macht der Agent?</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Schreibt Tests BEVOR Code implementiert wird</li>
+                                <li>RED-GREEN-REFACTOR Cycle enforcement</li>
+                                <li>Verifiziert 80%+ Coverage automatisch</li>
+                                <li>Erstellt Unit, Integration & E2E Tests</li>
+                                <li>Mockt externe Dependencies (Supabase, Redis, OpenAI)</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Test-Coverage:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">Branches: 80%+</span>
+                                <span class="text-xs badge">Functions: 80%+</span>
+                                <span class="text-xs badge">Lines: 80%+</span>
+                                <span class="text-xs badge">Statements: 80%+</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Model:</p>
+                            <span class="badge-primary badge">Claude Opus 4.5</span>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Beispiel Use Case:</p>
+                            <pre class="text-xs">Feature: Semantic Market Search
+
+1. Write Tests First (RED):
+   ✓ returns relevant markets
+   ✓ handles empty query
+   ✓ falls back when Redis down
+   ✓ sorts by similarity score
+
+2. Run Tests (FAIL) ❌
+
+3. Implement Code (GREEN):
+   - generateEmbedding()
+   - vectorSearch()
+   - fallbackSearch()
+
+4. Run Tests (PASS) ✅
+
+5. Refactor & Optimize
+
+6. Verify Coverage: 85% ✅</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code Reviewer Agent -->
+                <div class="card p-8 rounded-lg space-y-4">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl">🔍</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Code Reviewer Agent</h3>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Senior Code Reviewer für Quality, Security & Maintainability
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-sm font-bold mb-1">Wann nutzen?</p>
+                            <p class="text-sm text-muted-foreground">
+                                Nach JEDER Code-Änderung, vor jedem Commit. Mandatory!
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Review Kategorien:</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>CRITICAL: Security Issues (SQL Injection, XSS, Secrets)</li>
+                                <li>HIGH: Code Quality (Duplication, Complexity > 50 lines)</li>
+                                <li>MEDIUM: Performance (O(n²), Missing Memoization)</li>
+                                <li>LOW: Best Practices (Naming, TODOs, Comments)</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Prüft automatisch:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">Type Safety</span>
+                                <span class="text-xs badge">Error Handling</span>
+                                <span class="text-xs badge">Accessibility</span>
+                                <span class="text-xs badge">Test Coverage</span>
+                                <span class="text-xs badge">Secrets Detection</span>
+                                <span class="text-xs badge">License Compliance</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Model:</p>
+                            <span class="badge-primary badge">Claude Opus 4.5</span>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Output Format:</p>
+                            <pre class="text-xs">[CRITICAL] Hardcoded API Key
+File: src/api/client.ts:42
+Issue: API key exposed in source code
+
+const apiKey = "sk-abc123"  // ❌ Bad
+
+Fix:
+const apiKey = process.env.API_KEY  // ✓ Good
+
+[HIGH] Large Function
+File: src/utils/process.ts:12
+Issue: Function is 120 lines (>50 limit)
+Suggestion: Split into smaller functions
+
+Approval: ❌ BLOCK (2 CRITICAL issues)</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Reviewer Agent -->
+                <div class="card p-8 rounded-lg space-y-4">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl">🔒</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Security Reviewer Agent</h3>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                OWASP Top 10 Vulnerability Detection & Remediation
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-sm font-bold mb-1">Wann nutzen?</p>
+                            <p class="text-sm text-muted-foreground">
+                                Bei API Endpoints, Auth-Code, User Input Handling, Payment-Flows
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">OWASP Top 10 Checks:</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>A01: Injection (SQL, NoSQL, Command)</li>
+                                <li>A02: Broken Authentication</li>
+                                <li>A03: Sensitive Data Exposure</li>
+                                <li>A04: XML External Entities (XXE)</li>
+                                <li>A05: Broken Access Control</li>
+                                <li>A06: Security Misconfiguration</li>
+                                <li>A07: Cross-Site Scripting (XSS)</li>
+                                <li>A08: Insecure Deserialization</li>
+                                <li>A09: Vulnerable Components (npm audit)</li>
+                                <li>A10: Insufficient Logging & Monitoring</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Spezial-Checks:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">SSRF Prevention</span>
+                                <span class="text-xs badge">Rate Limiting</span>
+                                <span class="text-xs badge">Input Validation</span>
+                                <span class="text-xs badge">CSRF Protection</span>
+                                <span class="text-xs badge">Secrets in Logs</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Model:</p>
+                            <span class="badge-primary badge">Claude Opus 4.5</span>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Critical Use Case:</p>
+                            <pre class="text-xs">Platform handles real money!
+
+Financial Security:
+✓ Atomic transactions
+✓ Balance checks BEFORE withdrawal
+✓ Rate limiting on trades
+✓ Audit logging
+✓ No floating-point arithmetic
+
+Blockchain Security:
+✓ Wallet signatures validated
+✓ Private keys NEVER logged
+✓ RPC rate limiting
+✓ Slippage protection
+
+Risk Level: 🔴 HIGH → ✅ FIX IMMEDIATELY</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build Error Resolver Agent -->
+                <div class="card p-8 rounded-lg space-y-4">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl">🔧</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Build Error Resolver</h3>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                TypeScript & Build Error Specialist mit Minimal Diffs
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-sm font-bold mb-1">Wann nutzen?</p>
+                            <p class="text-sm text-muted-foreground">
+                                Wenn npm run build fehlschlägt oder TypeScript Errors auftreten
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Fix-Strategie (Minimal Changes):</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Sammelt ALLE Errors (nicht nur ersten)</li>
+                                <li>Kategorisiert nach Type (Inference, Null, Import)</li>
+                                <li>Fixt mit < 5% File Changes</li>
+                                <li>KEINE Architektur-Änderungen</li>
+                                <li>Re-Build zur Verifikation</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Typische Error-Patterns:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">Type Inference</span>
+                                <span class="text-xs badge">Null/Undefined</span>
+                                <span class="text-xs badge">Missing Properties</span>
+                                <span class="text-xs badge">Import Errors</span>
+                                <span class="text-xs badge">Generic Constraints</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Model:</p>
+                            <span class="badge-primary badge">Claude Opus 4.5</span>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Example Fix:</p>
+                            <pre class="text-xs">ERROR: Parameter 'data' implicitly has 'any'
+File: src/utils/process.ts:45
+
+// ❌ WRONG: Refactor entire file
+// 50 lines changed
+
+// ✅ CORRECT: Minimal fix
+// 1 line changed
+
+function processData(data: any[]) {
+  return data.map(item => item.value)
+}
+
+Build Status: ✅ PASSING
+Lines Changed: 1
+Time: 30 seconds</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E2E Runner Agent -->
+                <div class="card p-8 rounded-lg space-y-4">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl">🎭</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">E2E Runner Agent</h3>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                End-to-End Testing mit Playwright & Artifact Management
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-sm font-bold mb-1">Wann nutzen?</p>
+                            <p class="text-sm text-muted-foreground">
+                                Für kritische User Journeys (Login, Payment, Trading, Signup)
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Was macht der Agent?</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Erstellt Page Object Model Pattern Tests</li>
+                                <li>Browser Automation (Chromium, Firefox, WebKit)</li>
+                                <li>Screenshots & Videos on Failure</li>
+                                <li>Trace für Debugging</li>
+                                <li>Flaky Test Detection & Quarantine</li>
+                                <li>CI/CD Integration (GitHub Actions)</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Test-Priorisierung:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">HIGH: Auth & Payment</span>
+                                <span class="text-xs badge">MEDIUM: Search & Filter</span>
+                                <span class="text-xs badge">LOW: UI Polish</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Model:</p>
+                            <span class="badge-primary badge">Claude Opus 4.5</span>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Kritischer Flow Beispiel:</p>
+                            <pre class="text-xs">test('user can place trade', async ({ page }) => {
+  // 1. Navigate & Connect Wallet
+  await page.goto('/markets/test-market')
+  await connectWallet(page)
+
+  // 2. Select Position & Amount
+  await page.click('[data-testid="position-yes"]')
+  await page.fill('[data-testid="amount"]', '1.0')
+
+  // 3. Verify Preview
+  await expect(preview).toContainText('1.0 SOL')
+
+  // 4. Confirm Trade
+  await page.click('[data-testid="confirm"]')
+
+  // 5. Wait for Blockchain (30s timeout)
+  await waitForTransaction(page)
+
+  // 6. Verify Success
+  await expect(success).toBeVisible()
+
+  // Screenshot on each step
+  await page.screenshot({ path: 'trade-success.png' })
+})</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Refactor Cleaner Agent -->
+                <div class="card p-8 rounded-lg space-y-4">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl">🧹</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Refactor Cleaner Agent</h3>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Dead Code Removal & Quality Improvements
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-sm font-bold mb-1">Wann nutzen?</p>
+                            <p class="text-sm text-muted-foreground">
+                                Vor Release, nach größeren Features oder monatlich für Code Health
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Entfernt automatisch:</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Ungenutzte Komponenten & Functions (grep analysis)</li>
+                                <li>console.log, debugger Statements</li>
+                                <li>Doppelten/Dead Code</li>
+                                <li>Leere Interfaces & Types</li>
+                                <li>Unused Imports (ESLint fix)</li>
+                                <li>Commented-out Code</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Quality Improvements:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">DRY Principle</span>
+                                <span class="text-xs badge">KISS</span>
+                                <span class="text-xs badge">Immutability</span>
+                                <span class="text-xs badge">Type Safety</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Model:</p>
+                            <span class="badge-primary badge">Claude Opus 4.5</span>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Cleanup Report:</p>
+                            <pre class="text-xs">## Cleanup Summary
+
+Removed:
+- 12 unused components
+- 45 console.log statements
+- 8 empty interfaces
+- 230 unused imports
+- 3 duplicate functions
+
+Files Changed: 28
+Lines Removed: 450
+Bundle Size: -15KB (-8%)
+
+Tests: ✅ All passing
+Build: ✅ Success</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doc Updater Agent -->
+                <div class="card p-8 rounded-lg space-y-4">
+                    <div class="flex items-start gap-4">
+                        <span class="text-4xl">📝</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Doc Updater Agent</h3>
+                            <p class="text-sm text-muted-foreground mb-4">
+                                Automatische Dokumentations-Updates
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-sm font-bold mb-1">Wann nutzen?</p>
+                            <p class="text-sm text-muted-foreground">
+                                Nach großen Features, API-Änderungen oder vor Releases
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Aktualisiert automatisch:</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>README.md mit neuen Features & Setup</li>
+                                <li>API Dokumentation (Endpoints, Params, Responses)</li>
+                                <li>JSDoc Comments für Public APIs</li>
+                                <li>CHANGELOG.md mit Versioning</li>
+                                <li>Setup & Installation Guides</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-1">Model:</p>
+                            <span class="badge-primary badge">Claude Sonnet 4.5</span>
+                            <p class="text-xs text-muted-foreground mt-1">Sonnet reicht für Docs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-lg mt-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20">
+                <h3 class="text-2xl font-bold mb-4">🎯 Model Selection Guide</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <p class="font-bold mb-2">Claude Opus 4.5</p>
+                        <p class="text-sm text-muted-foreground mb-2">Für kritische Aufgaben:</p>
+                        <ul class="text-xs text-muted-foreground space-y-1">
+                            <li>• Planning</li>
+                            <li>• TDD Implementation</li>
+                            <li>• Security Reviews</li>
+                            <li>• Build Error Fixing</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-2">Claude Sonnet 4.5</p>
+                        <p class="text-sm text-muted-foreground mb-2">Für Standard-Tasks:</p>
+                        <ul class="text-xs text-muted-foreground space-y-1">
+                            <li>• Code Reviews</li>
+                            <li>• Dokumentation</li>
+                            <li>• Refactoring</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-2">Claude Haiku</p>
+                        <p class="text-sm text-muted-foreground mb-2">Für einfache Aufgaben:</p>
+                        <ul class="text-xs text-muted-foreground space-y-1">
+                            <li>• Syntax Fixes</li>
+                            <li>• Formatting</li>
+                            <li>• Simple Queries</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Shadcn Section -->
-    <section id="shadcn" class="py-20 px-4 bg-muted/50">
+    <!-- Skills Section - NEU & SEHR DETAILLIERT -->
+    <section id="skills" class="py-20 px-4">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold mb-12 text-center">🎨 Shadcn-UI Workflows</h2>
+            <h2 class="text-4xl font-bold mb-4 text-center">🎓 Alle Skills im Detail</h2>
+            <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                Skills sind wiederverwendbare Wissenspakete, die Claude Code lehren, wie bestimmte Aufgaben
+                optimal gelöst werden. Sie werden automatisch geladen, wenn relevant.
+            </p>
 
             <div class="space-y-8">
+                <!-- Coding Standards Skill -->
                 <div class="card p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4">Feature mit Form bauen</h3>
-                    <pre class="text-sm mb-4">Erstelle ein Settings Panel mit:
-- Tabs für Profile, Notifications, Billing
-- Form mit shadcn Form Components
-- Toast Notifications
-- Data Table für Billing History</pre>
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-4xl">📐</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Coding Standards</h3>
+                            <p class="text-sm text-muted-foreground">
+                                Universal Best Practices für TypeScript, JavaScript, React & Node.js
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Wann nutzen?</p>
+                            <p class="text-sm text-muted-foreground">
+                                Bei jedem Coding-Task. Wird automatisch geladen.
+                            </p>
+
+                            <p class="text-sm font-bold">Key Principles:</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Readability First (Code is read > written)</li>
+                                <li>KISS (Keep It Simple, Stupid)</li>
+                                <li>DRY (Don't Repeat Yourself)</li>
+                                <li>YAGNI (You Aren't Gonna Need It)</li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Best Practices:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">Immutability Pattern</span>
+                                <span class="text-xs badge">Type Safety</span>
+                                <span class="text-xs badge">Error Handling</span>
+                                <span class="text-xs badge">Async/Await</span>
+                                <span class="text-xs badge">Performance</span>
+                            </div>
+
+                            <p class="text-sm font-bold mt-3">Beispiel - Immutability:</p>
+                            <pre class="text-xs">// ✅ ALWAYS use spread operator
+const updated = { ...user, name: 'New' }
+
+// ❌ NEVER mutate directly
+user.name = 'New'  // BAD</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TDD Workflow Skill -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-4xl">🧪</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">TDD Workflow</h3>
+                            <p class="text-sm text-muted-foreground">
+                                Test-Driven Development mit 80%+ Coverage
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Core Principles:</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Tests BEFORE Code (immer!)</li>
+                                <li>Minimum 80% Coverage</li>
+                                <li>Alle Edge Cases abdecken</li>
+                                <li>Error Scenarios testen</li>
+                                <li>Boundary Conditions verifizieren</li>
+                            </ul>
+
+                            <p class="text-sm font-bold mt-3">TDD Workflow Steps:</p>
+                            <ol class="list-decimal list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Write User Journeys</li>
+                                <li>Generate Test Cases</li>
+                                <li>Run Tests (Should FAIL) ❌</li>
+                                <li>Implement Code</li>
+                                <li>Run Tests (Should PASS) ✅</li>
+                                <li>Refactor</li>
+                                <li>Verify Coverage 80%+</li>
+                            </ol>
+                        </div>
+
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Test Types:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">Unit Tests (Jest)</span>
+                                <span class="text-xs badge">Integration Tests</span>
+                                <span class="text-xs badge">E2E Tests (Playwright)</span>
+                            </div>
+
+                            <p class="text-sm font-bold mt-3">AAA Pattern:</p>
+                            <pre class="text-xs">test('calculates similarity', () => {
+  // Arrange
+  const vector1 = [1, 0, 0]
+  const vector2 = [0, 1, 0]
+
+  // Act
+  const result = calculateSimilarity(
+    vector1, vector2
+  )
+
+  // Assert
+  expect(result).toBe(0)
+})</pre>
+
+                            <p class="text-sm font-bold mt-3">Coverage Thresholds:</p>
+                            <pre class="text-xs">{
+  "coverageThresholds": {
+    "global": {
+      "branches": 80,
+      "functions": 80,
+      "lines": 80,
+      "statements": 80
+    }
+  }
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Patterns Skill -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-4xl">⚙️</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Backend Patterns</h3>
+                            <p class="text-sm text-muted-foreground">
+                                API Design, Database, Caching & Error Handling
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">API Design Standards:</p>
+                            <pre class="text-xs">GET    /api/markets       # List
+GET    /api/markets/:id   # Get
+POST   /api/markets       # Create
+PATCH  /api/markets/:id   # Update
+DELETE /api/markets/:id   # Delete
+
+# Query params
+GET /api/markets?status=active&limit=10</pre>
+
+                            <p class="text-sm font-bold mt-3">Response Format:</p>
+                            <pre class="text-xs">interface ApiResponse<T> {
+  success: boolean
+  data?: T
+  error?: string
+  meta?: {
+    total: number
+    page: number
+    limit: number
+  }
+}</pre>
+                        </div>
+
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Input Validation (Zod):</p>
+                            <pre class="text-xs">const CreateMarketSchema = z.object({
+  name: z.string().min(1).max(200),
+  description: z.string().min(1),
+  endDate: z.string().datetime(),
+  categories: z.array(z.string()).min(1)
+})
+
+const validated = schema.parse(body)</pre>
+
+                            <p class="text-sm font-bold mt-3">Best Practices:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">REST Conventions</span>
+                                <span class="text-xs badge">Error Handling</span>
+                                <span class="text-xs badge">Rate Limiting</span>
+                                <span class="text-xs badge">Caching Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Patterns Skill -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-4xl">🎨</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Frontend Patterns</h3>
+                            <p class="text-sm text-muted-foreground">
+                                React Best Practices, Hooks, State Management & Performance
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Component Structure:</p>
+                            <pre class="text-xs">interface ButtonProps {
+  children: React.ReactNode
+  onClick: () => void
+  disabled?: boolean
+  variant?: 'primary' | 'secondary'
+}
+
+export function Button({
+  children,
+  onClick,
+  disabled = false,
+  variant = 'primary'
+}: ButtonProps) {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`btn btn-${variant}`}
+    >
+      {children}
+    </button>
+  )
+}</pre>
+                        </div>
+
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Custom Hooks:</p>
+                            <pre class="text-xs">export function useDebounce<T>(
+  value: T,
+  delay: number
+): T {
+  const [debounced, setDebounced] =
+    useState<T>(value)
+
+  useEffect(() => {
+    const handler = setTimeout(
+      () => setDebounced(value),
+      delay
+    )
+    return () => clearTimeout(handler)
+  }, [value, delay])
+
+  return debounced
+}</pre>
+
+                            <p class="text-sm font-bold mt-3">Performance:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">useMemo</span>
+                                <span class="text-xs badge">useCallback</span>
+                                <span class="text-xs badge">Lazy Loading</span>
+                                <span class="text-xs badge">Code Splitting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Review Skill -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-4xl">🔒</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Security Review</h3>
+                            <p class="text-sm text-muted-foreground">
+                                OWASP Top 10, Secrets Detection & Vulnerability Patterns
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold">Critical Checks:</p>
+                            <ul class="list-disc list-inside text-xs text-muted-foreground space-y-1">
+                                <li>SQL Injection</li>
+                                <li>XSS Prevention</li>
+                                <li>CSRF Protection</li>
+                                <li>Hardcoded Secrets</li>
+                                <li>SSRF Prevention</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold">Auth & Access:</p>
+                            <ul class="list-disc list-inside text-xs text-muted-foreground space-y-1">
+                                <li>Authentication</li>
+                                <li>Authorization</li>
+                                <li>Session Management</li>
+                                <li>JWT Validation</li>
+                                <li>Rate Limiting</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold">Data Protection:</p>
+                            <ul class="list-disc list-inside text-xs text-muted-foreground space-y-1">
+                                <li>HTTPS Enforcement</li>
+                                <li>PII Encryption</li>
+                                <li>Log Sanitization</li>
+                                <li>Dependency Audit</li>
+                                <li>Security Headers</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <p class="text-sm font-bold mb-2">Vulnerability Detection:</p>
+                        <pre class="text-xs">// ❌ CRITICAL: SQL Injection
+const query = `SELECT * FROM users WHERE id = ${userId}`
+
+// ✅ CORRECT: Parameterized
+const { data } = await supabase
+  .from('users')
+  .select('*')
+  .eq('id', userId)</pre>
+                    </div>
+                </div>
+
+                <!-- Postgres Patterns Skill -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-4xl">🐘</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Postgres Patterns</h3>
+                            <p class="text-sm text-muted-foreground">
+                                Database Design, RLS, Migrations & Performance
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Schema Design:</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Normalization vs Denormalization</li>
+                                <li>Primary & Foreign Keys</li>
+                                <li>Indexes for Performance</li>
+                                <li>JSONB for Flexible Data</li>
+                            </ul>
+
+                            <p class="text-sm font-bold mt-3">Row Level Security (RLS):</p>
+                            <pre class="text-xs">-- Enable RLS
+ALTER TABLE markets ENABLE ROW LEVEL SECURITY;
+
+-- Policy: Users see own markets
+CREATE POLICY "Users see own markets"
+ON markets FOR SELECT
+USING (auth.uid() = creator_id);</pre>
+                        </div>
+
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Performance:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">Indexes</span>
+                                <span class="text-xs badge">Query Optimization</span>
+                                <span class="text-xs badge">Connection Pooling</span>
+                                <span class="text-xs badge">N+1 Prevention</span>
+                            </div>
+
+                            <p class="text-sm font-bold mt-3">Migrations:</p>
+                            <pre class="text-xs">-- Migration: Add column
+ALTER TABLE markets
+ADD COLUMN status TEXT
+DEFAULT 'active';
+
+-- Rollback: Remove column
+ALTER TABLE markets
+DROP COLUMN status;</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golang Patterns Skill -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-4xl">🐹</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Golang Patterns</h3>
+                            <p class="text-sm text-muted-foreground">
+                                Go Best Practices, Concurrency & Error Handling
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Error Handling:</p>
+                            <pre class="text-xs">// ✅ CORRECT: Explicit errors
+func fetchUser(id string) (*User, error) {
+  user, err := db.Get(id)
+  if err != nil {
+    return nil, fmt.Errorf(
+      "fetch user: %w", err
+    )
+  }
+  return user, nil
+}</pre>
+
+                            <p class="text-sm font-bold mt-3">Concurrency:</p>
+                            <pre class="text-xs">// Goroutines with WaitGroup
+var wg sync.WaitGroup
+for _, task := range tasks {
+  wg.Add(1)
+  go func(t Task) {
+    defer wg.Done()
+    process(t)
+  }(task)
+}
+wg.Wait()</pre>
+                        </div>
+
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Best Practices:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs badge">Interfaces</span>
+                                <span class="text-xs badge">Error Wrapping</span>
+                                <span class="text-xs badge">Context</span>
+                                <span class="text-xs badge">Testing</span>
+                            </div>
+
+                            <p class="text-sm font-bold mt-3">Table-Driven Tests:</p>
+                            <pre class="text-xs">func TestAdd(t *testing.T) {
+  tests := []struct {
+    name string
+    a, b int
+    want int
+  }{
+    {"positive", 2, 3, 5},
+    {"negative", -1, -2, -3},
+  }
+
+  for _, tt := range tests {
+    t.Run(tt.name, func(t *testing.T) {
+      got := Add(tt.a, tt.b)
+      if got != tt.want {
+        t.Errorf("got %d, want %d",
+          got, tt.want)
+      }
+    })
+  }
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continuous Learning Skill -->
+                <div class="card p-8 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-purple-500/20">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-4xl">🧠</span>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Continuous Learning</h3>
+                            <p class="text-sm text-muted-foreground">
+                                Automatisches Lernen aus Fehlern & Patterns
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm font-bold mb-2">Das Problem:</p>
+                            <p class="text-sm text-muted-foreground">
+                                Claude läuft mehrfach in den gleichen Fehler oder gibt dir Antworten, die du schon gehört hast.
+                                Wasted tokens, wasted context, wasted time.
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-2">Die Lösung:</p>
+                            <p class="text-sm text-muted-foreground mb-2">
+                                Wenn Claude Code etwas Nicht-Triviales entdeckt (Debugging-Technik, Workaround, Projekt-Pattern),
+                                wird es als neuer Skill gespeichert. Beim nächsten Mal wird der Skill automatisch geladen.
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-2">Workflow:</p>
+                            <ol class="list-decimal list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Session End Hook triggert</li>
+                                <li>Analyse: Was wurde gelernt?</li>
+                                <li>Ist es wiederverwendbar?</li>
+                                <li>Speichern als neuer Skill in <code>skills/learned/</code></li>
+                                <li>Nächste Session: Automatisch verfügbar</li>
+                            </ol>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-2">Beispiel - Gelerntes Pattern:</p>
+                            <pre class="text-xs">Problem: Next.js 15 Build Fehler mit React 19
+Lösung: FC Type nicht mehr nutzen
+
+// Wird automatisch in Skill gespeichert
+skills/learned/next15-react19-patterns.md
+
+// Nächstes Mal automatisch geladen
+✅ Claude weiß: "Use functional components
+   without FC type in React 19"</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hooks Section - NEU -->
+    <section id="hooks" class="py-20 px-4 bg-muted/50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-bold mb-4 text-center">🪝 Hooks im Detail</h2>
+            <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                Hooks sind Event-Trigger, die zu bestimmten Zeitpunkten im Workflow ausgeführt werden.
+                Sie ermöglichen Automation und Memory-Persistence.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <!-- PreToolUse Hook -->
+                <div class="card p-6 rounded-lg space-y-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">⚡</span>
+                        <div>
+                            <h3 class="text-lg font-bold">PreToolUse Hook</h3>
+                            <p class="text-xs text-muted-foreground">Vor jedem Tool-Aufruf</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-muted-foreground">
+                        Wird ausgeführt BEVOR Claude ein Tool nutzt (Read, Write, Edit, Bash, etc.)
+                    </p>
                     <div class="space-y-2">
-                        <p class="text-sm font-medium">Claude macht automatisch:</p>
-                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
-                            <li>Nutzt shadcn/ui Komponenten (Button, Form, Tabs, Toast, Table)</li>
-                            <li>Folgt deinem Styling (CSS Variables)</li>
-                            <li>TypeScript + Zod Validation</li>
-                            <li>Responsive Design</li>
-                            <li>Accessibility (ARIA, Keyboard Navigation)</li>
+                        <p class="text-xs font-bold">Use Cases:</p>
+                        <ul class="list-disc list-inside text-xs text-muted-foreground">
+                            <li>Logging & Tracking</li>
+                            <li>Tool-Usage Analytics</li>
+                            <li>Pre-Validation</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="card p-6 rounded-lg space-y-3">
-                        <h4 class="font-bold">Forms & Validation</h4>
-                        <p class="text-sm text-muted-foreground">
-                            react-hook-form + zod + shadcn Form Components
-                        </p>
-                        <div class="flex flex-wrap gap-1">
-                            <span class="text-xs badge">Input</span>
-                            <span class="text-xs badge">Form</span>
-                            <span class="text-xs badge">Select</span>
-                            <span class="text-xs badge">Checkbox</span>
+                <!-- PostToolUse Hook -->
+                <div class="card p-6 rounded-lg space-y-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">✨</span>
+                        <div>
+                            <h3 class="text-lg font-bold">PostToolUse Hook</h3>
+                            <p class="text-xs text-muted-foreground">Nach jedem Tool-Aufruf</p>
                         </div>
                     </div>
+                    <p class="text-sm text-muted-foreground">
+                        Wird ausgeführt NACHDEM Claude ein Tool genutzt hat
+                    </p>
+                    <div class="space-y-2">
+                        <p class="text-xs font-bold">Use Cases:</p>
+                        <ul class="list-disc list-inside text-xs text-muted-foreground">
+                            <li>Result Validation</li>
+                            <li>Auto-Formatting (Prettier)</li>
+                            <li>Post-Processing</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <div class="card p-6 rounded-lg space-y-3">
-                        <h4 class="font-bold">Data Tables</h4>
-                        <p class="text-sm text-muted-foreground">
-                            TanStack Table mit Sorting, Filtering, Pagination
-                        </p>
-                        <div class="flex flex-wrap gap-1">
-                            <span class="text-xs badge">Table</span>
-                            <span class="text-xs badge">Dropdown</span>
-                            <span class="text-xs badge">Badge</span>
+                <!-- Stop Hook -->
+                <div class="card p-6 rounded-lg space-y-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🛑</span>
+                        <div>
+                            <h3 class="text-lg font-bold">Stop Hook</h3>
+                            <p class="text-xs text-muted-foreground">Session Ende</p>
                         </div>
                     </div>
+                    <p class="text-sm text-muted-foreground">
+                        Wird ausgeführt wenn die Session beendet wird (Exit, Timeout)
+                    </p>
+                    <div class="space-y-2">
+                        <p class="text-xs font-bold">Use Cases (CRITICAL):</p>
+                        <ul class="list-disc list-inside text-xs text-muted-foreground">
+                            <li>Memory Persistence (Session Summary)</li>
+                            <li>Learnings speichern</li>
+                            <li>Cleanup Tasks</li>
+                            <li>Stats exportieren</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <div class="card p-6 rounded-lg space-y-3">
-                        <h4 class="font-bold">Dialogs & Modals</h4>
-                        <p class="text-sm text-muted-foreground">
-                            Confirmation Dialogs mit Loading States
-                        </p>
-                        <div class="flex flex-wrap gap-1">
-                            <span class="text-xs badge">Dialog</span>
-                            <span class="text-xs badge">AlertDialog</span>
-                            <span class="text-xs badge">Sheet</span>
+                <!-- PreCompact Hook -->
+                <div class="card p-6 rounded-lg space-y-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🗜️</span>
+                        <div>
+                            <h3 class="text-lg font-bold">PreCompact Hook</h3>
+                            <p class="text-xs text-muted-foreground">Vor Context Compaction</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-muted-foreground">
+                        Wird ausgeführt BEVOR der Context komprimiert wird (bei 80% Context Window)
+                    </p>
+                    <div class="space-y-2">
+                        <p class="text-xs font-bold">Use Cases:</p>
+                        <ul class="list-disc list-inside text-xs text-muted-foreground">
+                            <li>Wichtige State in File speichern</li>
+                            <li>Context Backup</li>
+                            <li>Progress Snapshot</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-lg bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-blue-500/20">
+                <h3 class="text-2xl font-bold mb-4">💡 Memory Persistence mit Hooks</h3>
+                <p class="text-sm text-muted-foreground mb-4">
+                    Die Power-Kombination für Session-übergreifendes Memory:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="text-sm font-bold mb-2">Stop Hook - Session End:</p>
+                        <pre class="text-xs">// Am Ende jeder Session
+1. Analysiere was erreicht wurde
+2. Speichere in .claude/sessions/
+3. Format:
+   - Was funktioniert hat (mit Beweisen)
+   - Was NICHT funktioniert hat
+   - Was noch zu tun ist
+
+4. Datei: session-2026-01-28.md</pre>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-bold mb-2">Nächste Session - Load Memory:</p>
+                        <pre class="text-xs">// Neue Session startet
+1. User: "Lies .claude/sessions/latest.md"
+2. Claude lädt Context
+3. Weiß genau wo aufhören
+4. Kein Context Loss!
+5. Maximale Produktivität
+
+✅ Sessions können Tage/Wochen
+   auseinander liegen - Memory bleibt!</pre>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <p class="text-sm font-bold mb-2">PreCompact Hook - Context Management:</p>
+                    <pre class="text-xs">// Bei 80% Context Window
+1. Wichtige State speichern (Plan, Decisions, Blockers)
+2. File: .claude/tmp/compact-state.md
+3. Context wird komprimiert
+4. Wichtiger State bleibt erhalten
+5. Nach Compaction: State wieder laden</pre>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-lg mt-6">
+                <h3 class="text-xl font-bold mb-4">🔧 Hook Configuration</h3>
+                <p class="text-sm text-muted-foreground mb-3">
+                    Hooks werden in <code>hooks/hooks.json</code> konfiguriert:
+                </p>
+                <pre class="text-sm">{
+  "hooks": [
+    {
+      "name": "memory-persistence",
+      "type": "Stop",
+      "command": "node hooks/save-session.js"
+    },
+    {
+      "name": "pre-compact-backup",
+      "type": "PreCompact",
+      "command": "node hooks/backup-state.js"
+    },
+    {
+      "name": "auto-format",
+      "type": "PostToolUse",
+      "command": "prettier --write {file}",
+      "tools": ["Write", "Edit"]
+    }
+  ]
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- MCPs Section - NEU -->
+    <section id="mcps" class="py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-bold mb-4 text-center">🔌 MCPs (Model Context Protocol)</h2>
+            <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                MCPs sind Plugins, die Claude Code zusätzliche Tools geben (GitHub, Databases, Deployment, etc.).
+                ABER: Sie verbrauchen Context Window! Smart nutzen!
+            </p>
+
+            <div class="space-y-8">
+                <!-- Was sind MCPs -->
+                <div class="card p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Was sind MCPs?</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <p class="text-sm text-muted-foreground">
+                                Model Context Protocol (MCP) ist ein Standard für Plugins, die Claude Code
+                                neue Fähigkeiten geben - ähnlich wie VS Code Extensions.
+                            </p>
+                            <p class="text-sm font-bold">Vorteile:</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Zugriff auf externe Services (GitHub, Supabase)</li>
+                                <li>Vereinfacht komplexe Workflows</li>
+                                <li>Standardisiert & wiederverwendbar</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3">
+                            <p class="text-sm font-bold">Nachteile (WICHTIG!):</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Verbraucht Context Window (pro MCP ~5-10%)</li>
+                                <li>Höherer Token-Usage = höhere Kosten</li>
+                                <li>Kann Performance beeinträchtigen</li>
+                            </ul>
+                            <div class="bg-destructive/10 border border-destructive/20 rounded p-3 mt-3">
+                                <p class="text-xs font-bold">⚠️ Regel:</p>
+                                <p class="text-xs text-muted-foreground">
+                                    Nutze maximal 5-7 MCPs gleichzeitig.
+                                    Mehr = Context Window Probleme!
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card p-8 rounded-lg bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-500/20">
-                    <h3 class="text-xl font-bold mb-3">💡 Pro-Tipp: Command Palette</h3>
-                    <pre class="text-sm">Erstelle eine Command Palette (CMD+K):
+                <!-- Available MCPs -->
+                <div class="card p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Verfügbare MCPs</h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold flex items-center gap-2">
+                                <span>🐙</span> GitHub MCP
+                            </p>
+                            <p class="text-xs text-muted-foreground">
+                                Create PRs, Issues, Comments, View Repos
+                            </p>
+                            <span class="text-xs badge">Context: ~8%</span>
+                        </div>
 
-Features:
-- Keyboard Shortcut: CMD+K / CTRL+K
-- Search across Pages, Actions, Settings
-- Keyboard Navigation
-- shadcn Command + Dialog
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold flex items-center gap-2">
+                                <span>🗄️</span> Supabase MCP
+                            </p>
+                            <p class="text-xs text-muted-foreground">
+                                Database Queries, RLS, Migrations
+                            </p>
+                            <span class="text-xs badge">Context: ~6%</span>
+                        </div>
 
-Claude implementiert in Minuten!</pre>
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold flex items-center gap-2">
+                                <span>▲</span> Vercel MCP
+                            </p>
+                            <p class="text-xs text-muted-foreground">
+                                Deploy, Logs, Environment Variables
+                            </p>
+                            <span class="text-xs badge">Context: ~5%</span>
+                        </div>
+
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold flex items-center gap-2">
+                                <span>🚂</span> Railway MCP
+                            </p>
+                            <p class="text-xs text-muted-foreground">
+                                Deploy Services, Databases, Logs
+                            </p>
+                            <span class="text-xs badge">Context: ~5%</span>
+                        </div>
+
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold flex items-center gap-2">
+                                <span>🔍</span> Web Search MCP
+                            </p>
+                            <p class="text-xs text-muted-foreground">
+                                Search the web for current info
+                            </p>
+                            <span class="text-xs badge">Context: ~4%</span>
+                        </div>
+
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold flex items-center gap-2">
+                                <span>🌐</span> Browser MCP
+                            </p>
+                            <p class="text-xs text-muted-foreground">
+                                Navigate, Click, Fill Forms
+                            </p>
+                            <span class="text-xs badge">Context: ~7%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Context Window Management -->
+                <div class="card p-8 rounded-lg bg-gradient-to-r from-orange-500/10 to-red-500/10 border-orange-500/20">
+                    <h3 class="text-2xl font-bold mb-4">⚠️ Context Window Management (KRITISCH!)</h3>
+
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm font-bold mb-2">Das Problem:</p>
+                            <p class="text-sm text-muted-foreground">
+                                Jeder MCP verbraucht Context Window durch Tool-Definitionen, Schemas und Dokumentation.
+                                Mit 10+ MCPs hast du nur noch 50-60% Context für deine eigentliche Arbeit!
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-2">Die Lösung: CLI + Skills statt MCPs</p>
+                            <p class="text-sm text-muted-foreground mb-3">
+                                Die meisten Platforms haben bereits CLIs. Nutze diese direkt!
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-xs font-bold mb-2">❌ Mit MCP (verbraucht Context):</p>
+                                    <pre class="text-xs">// GitHub MCP geladen (8% Context)
+// Supabase MCP geladen (6% Context)
+// Vercel MCP geladen (5% Context)
+// = 19% Context WEG
+
+Verfügbar: 81%</pre>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold mb-2">✅ Mit CLI + Commands (kein Context):</p>
+                                    <pre class="text-xs">// Command: /gh-pr
+gh pr create --title "..." --body "..."
+
+// Command: /supabase-migrate
+supabase db push
+
+// Command: /deploy
+vercel --prod
+
+Verfügbar: 100%</pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-2">Best Practices:</p>
+                            <ul class="list-decimal list-inside text-sm text-muted-foreground space-y-2">
+                                <li>
+                                    <strong>Lazy Loading nutzen:</strong> MCPs werden nur geladen, wenn benötigt
+                                </li>
+                                <li>
+                                    <strong>Max 5-7 MCPs:</strong> Mehr führt zu Context-Problemen
+                                </li>
+                                <li>
+                                    <strong>CLI bevorzugen:</strong> Für GitHub, Supabase, Vercel, Railway
+                                </li>
+                                <li>
+                                    <strong>Skills erstellen:</strong> Wrapper um CLIs mit deinen Defaults
+                                </li>
+                                <li>
+                                    <strong>Context Monitor:</strong> Immer im Blick behalten (< 80%)
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold mb-2">Beispiel - GitHub ohne MCP:</p>
+                            <pre class="text-xs">// commands/gh-pr.md
+---
+name: gh-pr
+description: Create GitHub PR with defaults
+---
+
+Execute:
+gh pr create \
+  --title "$1" \
+  --body "$2" \
+  --base main \
+  --label "ready-for-review"
+
+Usage: /gh-pr "Add feature" "Description"
+
+✅ Kein Context verbraucht
+✅ Schneller
+✅ Deine Defaults</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Setup Guide -->
+                <div class="card p-8 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">🔧 MCP Setup (wenn wirklich nötig)</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-sm font-bold mb-2">Installation:</p>
+                            <pre class="text-xs">// Install MCP
+npm install -g @modelcontextprotocol/github
+
+// Add to Claude Config
+~/.config/claude-code/mcp-config.json
+
+{
+  "mcps": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@mcp/github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      }
+    }
+  }
+}</pre>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold mb-2">Lazy Loading Config:</p>
+                            <pre class="text-xs">{
+  "mcps": {
+    "github": {
+      "lazyLoad": true,
+      "triggerKeywords": ["github", "pr", "issue"]
+    },
+    "supabase": {
+      "lazyLoad": true,
+      "triggerKeywords": ["database", "supabase"]
+    }
+  }
+}
+
+// Wird nur geladen wenn Keywords erwähnt
+// Spart massiv Context!</pre>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Workflow Section -->
+    <!-- Shadcn Section - ERWEITERT -->
+    <section id="shadcn" class="py-20 px-4 bg-muted/50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-bold mb-4 text-center">🎨 Shadcn-UI Workflows (Erweitert)</h2>
+            <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                Shadcn-UI ist eine Component Library mit Copy-Paste Components.
+                Claude Code kennt alle Patterns und baut automatisch mit Shadcn.
+            </p>
+
+            <div class="space-y-8">
+                <!-- Feature mit Form bauen -->
+                <div class="card p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Feature mit Form bauen</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-sm font-bold mb-2">Dein Prompt:</p>
+                            <pre class="text-sm">Erstelle ein Settings Panel mit:
+- Tabs für Profile, Notifications, Billing
+- Form mit shadcn Form Components
+- Toast Notifications
+- Data Table für Billing History</pre>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold mb-2">Claude macht automatisch:</p>
+                            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                <li>Nutzt shadcn/ui Komponenten (Button, Form, Tabs, Toast, Table)</li>
+                                <li>Folgt deinem Styling (CSS Variables)</li>
+                                <li>TypeScript + Zod Validation</li>
+                                <li>Responsive Design</li>
+                                <li>Accessibility (ARIA, Keyboard Navigation)</li>
+                                <li>Loading States & Error Handling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Component Categories -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Alle Component-Kategorien</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Forms & Validation -->
+                        <div class="card p-6 rounded-lg space-y-3">
+                            <h4 class="font-bold text-lg">📝 Forms & Validation</h4>
+                            <p class="text-sm text-muted-foreground">
+                                react-hook-form + zod + shadcn Form Components
+                            </p>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold">Components:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs badge">Input</span>
+                                    <span class="text-xs badge">Textarea</span>
+                                    <span class="text-xs badge">Select</span>
+                                    <span class="text-xs badge">Checkbox</span>
+                                    <span class="text-xs badge">RadioGroup</span>
+                                    <span class="text-xs badge">Switch</span>
+                                    <span class="text-xs badge">Slider</span>
+                                    <span class="text-xs badge">Form</span>
+                                </div>
+                            </div>
+                            <div class="text-xs">
+                                <p class="font-bold mb-1">Beispiel:</p>
+                                <pre class="text-xs">const schema = z.object({
+  email: z.string().email(),
+  age: z.number().min(18)
+})
+
+<Form schema={schema}>
+  <FormField name="email" />
+  <FormField name="age" />
+</Form></pre>
+                            </div>
+                        </div>
+
+                        <!-- Data Tables -->
+                        <div class="card p-6 rounded-lg space-y-3">
+                            <h4 class="font-bold text-lg">📊 Data Tables</h4>
+                            <p class="text-sm text-muted-foreground">
+                                TanStack Table mit Sorting, Filtering, Pagination
+                            </p>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold">Features:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs badge">Sorting</span>
+                                    <span class="text-xs badge">Filtering</span>
+                                    <span class="text-xs badge">Pagination</span>
+                                    <span class="text-xs badge">Row Selection</span>
+                                    <span class="text-xs badge">Column Resize</span>
+                                    <span class="text-xs badge">Export</span>
+                                </div>
+                            </div>
+                            <div class="text-xs">
+                                <p class="font-bold mb-1">Use Cases:</p>
+                                <ul class="list-disc list-inside text-muted-foreground">
+                                    <li>Admin Dashboards</li>
+                                    <li>Billing History</li>
+                                    <li>User Lists</li>
+                                    <li>Transaction Tables</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Dialogs & Modals -->
+                        <div class="card p-6 rounded-lg space-y-3">
+                            <h4 class="font-bold text-lg">💬 Dialogs & Modals</h4>
+                            <p class="text-sm text-muted-foreground">
+                                Confirmation Dialogs mit Loading States
+                            </p>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold">Components:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs badge">Dialog</span>
+                                    <span class="text-xs badge">AlertDialog</span>
+                                    <span class="text-xs badge">Sheet</span>
+                                    <span class="text-xs badge">Drawer</span>
+                                    <span class="text-xs badge">Popover</span>
+                                    <span class="text-xs badge">Tooltip</span>
+                                </div>
+                            </div>
+                            <div class="text-xs">
+                                <p class="font-bold mb-1">Patterns:</p>
+                                <ul class="list-disc list-inside text-muted-foreground">
+                                    <li>Delete Confirmation</li>
+                                    <li>Multi-Step Wizards</li>
+                                    <li>Side Panels</li>
+                                    <li>Context Menus</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="card p-6 rounded-lg space-y-3">
+                            <h4 class="font-bold text-lg">🧭 Navigation</h4>
+                            <p class="text-sm text-muted-foreground">
+                                Modern Navigation Patterns
+                            </p>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold">Components:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs badge">Tabs</span>
+                                    <span class="text-xs badge">Breadcrumb</span>
+                                    <span class="text-xs badge">Menubar</span>
+                                    <span class="text-xs badge">NavigationMenu</span>
+                                    <span class="text-xs badge">Command</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feedback -->
+                        <div class="card p-6 rounded-lg space-y-3">
+                            <h4 class="font-bold text-lg">💬 Feedback</h4>
+                            <p class="text-sm text-muted-foreground">
+                                User Feedback & Status
+                            </p>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold">Components:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs badge">Toast</span>
+                                    <span class="text-xs badge">Alert</span>
+                                    <span class="text-xs badge">Progress</span>
+                                    <span class="text-xs badge">Skeleton</span>
+                                    <span class="text-xs badge">Badge</span>
+                                    <span class="text-xs badge">Spinner</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Layout -->
+                        <div class="card p-6 rounded-lg space-y-3">
+                            <h4 class="font-bold text-lg">📐 Layout</h4>
+                            <p class="text-sm text-muted-foreground">
+                                Structure & Organization
+                            </p>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold">Components:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs badge">Card</span>
+                                    <span class="text-xs badge">Separator</span>
+                                    <span class="text-xs badge">ScrollArea</span>
+                                    <span class="text-xs badge">Resizable</span>
+                                    <span class="text-xs badge">Accordion</span>
+                                    <span class="text-xs badge">Collapsible</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Patterns -->
+                <div class="card p-8 rounded-lg bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-500/20">
+                    <h3 class="text-xl font-bold mb-4">💡 Advanced Patterns</h3>
+
+                    <div class="space-y-6">
+                        <!-- Command Palette -->
+                        <div>
+                            <p class="text-sm font-bold mb-2">1. Command Palette (CMD+K)</p>
+                            <p class="text-sm text-muted-foreground mb-2">
+                                Globale Suche & Aktionen wie in VS Code
+                            </p>
+                            <pre class="text-xs">Erstelle eine Command Palette (CMD+K):
+
+Features:
+- Keyboard Shortcut: CMD+K / CTRL+K
+- Search across Pages, Actions, Settings
+- Keyboard Navigation (Arrow Keys, Enter)
+- Categories (Pages, Actions, Settings)
+- Recent Items
+- Fuzzy Search
+
+Components: Command + Dialog
+
+Claude implementiert in Minuten!</pre>
+                        </div>
+
+                        <!-- Multi-Step Form -->
+                        <div>
+                            <p class="text-sm font-bold mb-2">2. Multi-Step Form Wizard</p>
+                            <p class="text-sm text-muted-foreground mb-2">
+                                Onboarding, Checkout, Complex Forms
+                            </p>
+                            <pre class="text-xs">Features:
+- Steps Indicator (Progress)
+- Navigation (Next, Back, Skip)
+- Validation pro Step
+- State Persistence
+- Review Step am Ende
+
+Components: Tabs + Form + Stepper</pre>
+                        </div>
+
+                        <!-- Combobox with Search -->
+                        <div>
+                            <p class="text-sm font-bold mb-2">3. Combobox mit Server Search</p>
+                            <p class="text-sm text-muted-foreground mb-2">
+                                Autocomplete mit API Integration
+                            </p>
+                            <pre class="text-xs">Features:
+- Debounced Search (500ms)
+- API Integration (fetch)
+- Loading States
+- Empty States
+- Keyboard Navigation
+- Create New Option
+
+Components: Combobox + Command</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code Beispiel -->
+                <div class="card p-8 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">💻 Code-Beispiel: Form mit Validation</h3>
+                    <pre class="text-sm">import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import * as z from "zod"
+import { Button } from "@/components/ui/button"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { toast } from "@/components/ui/use-toast"
+
+const formSchema = z.object({
+  username: z.string().min(2, "Mindestens 2 Zeichen"),
+  email: z.string().email("Ungültige Email"),
+})
+
+export function ProfileForm() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      username: "",
+      email: "",
+    },
+  })
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    toast({
+      title: "Gespeichert!",
+      description: "Dein Profil wurde aktualisiert.",
+    })
+  }
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Username</FormLabel>
+              <FormControl>
+                <Input placeholder="john_doe" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input placeholder="john@example.com" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button type="submit">Speichern</Button>
+      </form>
+    </Form>
+  )
+}</pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section - STARK ERWEITERT -->
     <section id="workflow" class="py-20 px-4">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold mb-12 text-center">🔄 Der 6-Phasen Workflow</h2>
+            <h2 class="text-4xl font-bold mb-4 text-center">🔄 Der 6-Phasen Workflow (Detailliert)</h2>
+            <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                Von der Idee zum Production-Ready Code in unter 60 Minuten.
+                Jede Phase mit konkreten Commands, Tools und Zeitangaben.
+            </p>
 
             <div class="space-y-6">
+                <!-- Phase 1: Planning -->
                 <div class="card p-6 rounded-lg">
                     <div class="flex items-start gap-4">
                         <div class="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
                             1
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Planning (5-10 Min)</h3>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold">Planning Phase</h3>
+                                <span class="badge-primary badge">5-10 Min</span>
+                            </div>
                             <p class="text-muted-foreground mb-3">
                                 Feature definieren, Architektur analysieren, Plan erstellen
                             </p>
-                            <pre class="text-sm">/plan → User Story + Requirements + Tech Stack</pre>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-sm font-bold mb-2">Command:</p>
+                                    <pre class="text-xs">/plan</pre>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold mb-2">Tools:</p>
+                                    <div class="flex flex-wrap gap-1">
+                                        <span class="text-xs badge">Read</span>
+                                        <span class="text-xs badge">Grep</span>
+                                        <span class="text-xs badge">Glob</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <p class="text-sm font-bold mb-2">Was passiert:</p>
+                                <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                    <li>Analysiert bestehende Codebase-Struktur</li>
+                                    <li>Identifiziert wiederverwendbare Patterns</li>
+                                    <li>Schlägt shadcn Components vor</li>
+                                    <li>Erstellt Step-by-Step Plan mit Phases</li>
+                                    <li>Definiert Testing Strategy</li>
+                                    <li>Listet Risks & Mitigations</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-3">
+                                <p class="text-sm font-bold mb-2">Output:</p>
+                                <pre class="text-xs">## Implementation Plan
+
+### Overview
+Feature: User Settings Panel
+
+### Requirements
+- Profile editing with validation
+- Email notification preferences
+- Billing history table
+
+### Architecture Changes
+- components/settings/SettingsLayout.tsx (new)
+- components/settings/ProfileForm.tsx (new)
+- app/api/settings/route.ts (new)
+
+### Phase 1: Database Schema
+1. Create settings table
+2. Add RLS policies
+Risk: LOW
+
+### Phase 2: API Routes
+1. GET /api/settings
+2. PATCH /api/settings/:id
+Risk: MEDIUM (Auth required)
+
+### Testing Strategy
+- Unit: Form validation
+- Integration: API endpoints
+- E2E: Complete settings flow</pre>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Phase 2: Implementation -->
                 <div class="card p-6 rounded-lg">
                     <div class="flex items-start gap-4">
                         <div class="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
                             2
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Implementation (30-60 Min)</h3>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold">Implementation Phase (TDD)</h3>
+                                <span class="badge-primary badge">30-60 Min</span>
+                            </div>
                             <p class="text-muted-foreground mb-3">
-                                TDD: Tests first, dann Code. Mit shadcn Components.
+                                Tests first, dann Code. Mit shadcn Components.
                             </p>
-                            <pre class="text-sm">/tdd → Tests → Implementation → Verification</pre>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-sm font-bold mb-2">Command:</p>
+                                    <pre class="text-xs">/tdd</pre>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold mb-2">Coverage:</p>
+                                    <div class="flex flex-wrap gap-1">
+                                        <span class="text-xs badge">80%+ Required</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <p class="text-sm font-bold mb-2">TDD Cycle:</p>
+                                <ol class="list-decimal list-inside text-sm text-muted-foreground space-y-1">
+                                    <li>RED: Tests schreiben (müssen fehlschlagen) ❌</li>
+                                    <li>GREEN: Minimale Implementation schreiben ✅</li>
+                                    <li>REFACTOR: Code verbessern, Tests bleiben grün 🔄</li>
+                                    <li>VERIFY: Coverage prüfen (80%+) 📊</li>
+                                </ol>
+                            </div>
+
+                            <div class="mt-3 grid md:grid-cols-3 gap-3">
+                                <div class="bg-muted/50 p-3 rounded">
+                                    <p class="text-xs font-bold mb-1">Unit Tests</p>
+                                    <p class="text-xs text-muted-foreground">
+                                        Funktionen, Utils, Validierung
+                                    </p>
+                                </div>
+                                <div class="bg-muted/50 p-3 rounded">
+                                    <p class="text-xs font-bold mb-1">Integration Tests</p>
+                                    <p class="text-xs text-muted-foreground">
+                                        API Endpoints, DB Queries
+                                    </p>
+                                </div>
+                                <div class="bg-muted/50 p-3 rounded">
+                                    <p class="text-xs font-bold mb-1">E2E Tests</p>
+                                    <p class="text-xs text-muted-foreground">
+                                        Kritische User Flows
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Phase 3: UI/UX Polish -->
                 <div class="card p-6 rounded-lg">
                     <div class="flex items-start gap-4">
                         <div class="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
                             3
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">UI/UX Polish (15-30 Min)</h3>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold">UI/UX Polish</h3>
+                                <span class="badge-primary badge">15-30 Min</span>
+                            </div>
                             <p class="text-muted-foreground mb-3">
                                 Loading States, Error Handling, Accessibility, Responsive
                             </p>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <span class="badge">Skeleton Loading</span>
-                                <span class="badge">Toast Notifications</span>
-                                <span class="badge">ARIA Labels</span>
-                                <span class="badge">Mobile First</span>
+
+                            <div class="grid md:grid-cols-2 gap-4 mt-3">
+                                <div>
+                                    <p class="text-sm font-bold mb-2">Checklist:</p>
+                                    <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                        <li>✅ Loading States (Skeleton, Spinner)</li>
+                                        <li>✅ Error States (Toast, Alert)</li>
+                                        <li>✅ Empty States (Placeholder)</li>
+                                        <li>✅ Success Feedback (Toast)</li>
+                                        <li>✅ Keyboard Navigation</li>
+                                        <li>✅ Mobile Responsive</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold mb-2">Accessibility (A11y):</p>
+                                    <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                                        <li>✅ ARIA Labels</li>
+                                        <li>✅ Focus States</li>
+                                        <li>✅ Color Contrast (WCAG AA)</li>
+                                        <li>✅ Screen Reader Support</li>
+                                        <li>✅ Keyboard Shortcuts</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Phase 4: Code Review -->
                 <div class="card p-6 rounded-lg">
                     <div class="flex items-start gap-4">
                         <div class="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
                             4
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Code Review (10 Min)</h3>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold">Code Review</h3>
+                                <span class="badge-primary badge">10 Min</span>
+                            </div>
                             <p class="text-muted-foreground mb-3">
                                 Security, Performance, Best Practices, Type Safety
                             </p>
-                            <pre class="text-sm">/code-review → Automatische Prüfung</pre>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-sm font-bold mb-2">Commands:</p>
+                                    <pre class="text-xs">/code-review
+/security-review (für API/Auth)</pre>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold mb-2">Kategorien:</p>
+                                    <div class="flex flex-wrap gap-1">
+                                        <span class="text-xs badge">CRITICAL</span>
+                                        <span class="text-xs badge">HIGH</span>
+                                        <span class="text-xs badge">MEDIUM</span>
+                                        <span class="text-xs badge">LOW</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <p class="text-sm font-bold mb-2">Automatische Checks:</p>
+                                <div class="grid md:grid-cols-3 gap-2">
+                                    <span class="text-xs badge">Security Issues</span>
+                                    <span class="text-xs badge">Code Duplication</span>
+                                    <span class="text-xs badge">Performance</span>
+                                    <span class="text-xs badge">Type Safety</span>
+                                    <span class="text-xs badge">Error Handling</span>
+                                    <span class="text-xs badge">Test Coverage</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Phase 5: Testing & Build -->
                 <div class="card p-6 rounded-lg">
                     <div class="flex items-start gap-4">
                         <div class="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
                             5
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Testing & Build (5-10 Min)</h3>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold">Testing & Build</h3>
+                                <span class="badge-primary badge">5-10 Min</span>
+                            </div>
                             <p class="text-muted-foreground mb-3">
                                 Coverage prüfen, Build testen, E2E Tests optional
                             </p>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <code>/test-coverage</code>
-                                <code>/build-fix</code>
-                                <code>/e2e</code>
+
+                            <div class="grid md:grid-cols-3 gap-3">
+                                <div class="bg-muted/50 p-3 rounded">
+                                    <p class="text-xs font-bold mb-1">Coverage</p>
+                                    <pre class="text-xs">npm run test:coverage
+
+✅ Branches: 85%
+✅ Functions: 88%
+✅ Lines: 86%</pre>
+                                </div>
+                                <div class="bg-muted/50 p-3 rounded">
+                                    <p class="text-xs font-bold mb-1">Build</p>
+                                    <pre class="text-xs">/build-fix
+
+✅ TypeScript: 0 errors
+✅ ESLint: 0 warnings
+✅ Build: Success</pre>
+                                </div>
+                                <div class="bg-muted/50 p-3 rounded">
+                                    <p class="text-xs font-bold mb-1">E2E (Optional)</p>
+                                    <pre class="text-xs">/e2e
+
+✅ 5 tests passing
+✅ Screenshots saved
+✅ 0 flaky tests</pre>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Phase 6: Deployment -->
                 <div class="card p-6 rounded-lg bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20">
                     <div class="flex items-start gap-4">
                         <div class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
                             6
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Deployment (5 Min)</h3>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold">Deployment</h3>
+                                <span class="badge-primary badge">5 Min</span>
+                            </div>
                             <p class="text-muted-foreground mb-3">
                                 Commit mit guter Message, PR erstellen, Ship it!
                             </p>
-                            <pre class="text-sm">"Commit die Changes" → "Create PR"</pre>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-sm font-bold mb-2">Git Workflow:</p>
+                                    <pre class="text-xs">"Commit die Changes"
+
+✅ Staged: 12 files
+✅ Commit Message:
+   "feat: Add user settings panel
+
+   - Profile editing with Zod validation
+   - Email notification preferences
+   - Billing history table
+   - 85% test coverage
+   - Accessibility compliant
+
+   Co-Authored-By: Claude Sonnet 4.5"</pre>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold mb-2">PR erstellen:</p>
+                                    <pre class="text-xs">"Create PR"
+
+✅ Title: Add user settings panel
+✅ Body:
+   ## Summary
+   - Profile editing
+   - Notification prefs
+   - Billing history
+
+   ## Test Plan
+   - [x] Unit tests passing
+   - [x] E2E tests passing
+   - [x] Manual testing done
+
+✅ PR URL: github.com/...</pre>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -571,24 +2795,36 @@ Claude implementiert in Minuten!</pre>
                 <h3 class="text-2xl font-bold mb-4">
                     Komplettes Feature in <span class="gradient-text">60 Minuten</span>
                 </h3>
-                <p class="text-muted-foreground">
+                <p class="text-muted-foreground mb-4">
                     Von der Idee zum Production-Ready Code mit Tests, Reviews und Best Practices
                 </p>
+                <div class="flex flex-wrap gap-2 justify-center">
+                    <span class="badge">Planning: 10min</span>
+                    <span class="badge">Implementation: 40min</span>
+                    <span class="badge">Review: 10min</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Examples Section -->
+    <!-- Examples Section - STARK ERWEITERT -->
     <section id="examples" class="py-20 px-4 bg-muted/50">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold mb-12 text-center">💡 Häufige Szenarien</h2>
+            <h2 class="text-4xl font-bold mb-4 text-center">💡 Realistische Szenarien</h2>
+            <p class="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                Schritt-für-Schritt Beispiele für häufige Tasks mit Timing und erwarteten Outputs
+            </p>
 
             <div class="space-y-6">
+                <!-- Szenario 1: Neue Feature Page -->
                 <div class="card p-8 rounded-lg">
-                    <h3 class="text-xl font-bold mb-4">Szenario 1: Neue Feature Page</h3>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">Szenario 1: Neue Feature Page</h3>
+                        <span class="badge-primary badge">⏱️ 15-30 Min</span>
+                    </div>
                     <div class="space-y-4">
                         <div class="flex items-start gap-3">
-                            <span class="text-primary font-bold">Du:</span>
+                            <span class="text-primary font-bold w-16">Du:</span>
                             <div class="flex-1">
                                 <code class="text-sm">/plan</code>
                                 <p class="text-sm mt-2">
@@ -598,80 +2834,294 @@ Claude implementiert in Minuten!</pre>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <span class="text-green-600 font-bold">Claude:</span>
-                            <p class="text-sm flex-1 text-muted-foreground">
-                                Erstellt Plan mit allen shadcn Components
-                            </p>
+                            <span class="text-green-600 font-bold w-16">Claude:</span>
+                            <div class="flex-1 text-sm text-muted-foreground">
+                                <p class="font-bold mb-1">Erstellt detaillierten Plan:</p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Components: BlogPost, TableOfContents, ShareButtons, RelatedPosts</li>
+                                    <li>Shadcn: Card, Button, Separator, ScrollArea</li>
+                                    <li>Libraries: remark, gray-matter für Markdown</li>
+                                    <li>API Route: /api/posts/[slug]</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <span class="text-primary font-bold">Du:</span>
-                            <p class="text-sm flex-1">"Looks good, let's implement"</p>
+                            <span class="text-primary font-bold w-16">Du:</span>
+                            <p class="text-sm flex-1">"Looks good, let's implement with /tdd"</p>
                         </div>
                         <div class="flex items-start gap-3">
-                            <span class="text-green-600 font-bold">Claude:</span>
-                            <p class="text-sm flex-1 text-muted-foreground">
-                                Baut alles mit /tdd
-                            </p>
+                            <span class="text-green-600 font-bold w-16">Claude:</span>
+                            <div class="flex-1 text-sm text-muted-foreground">
+                                <p class="font-bold mb-1">TDD Implementation:</p>
+                                <ol class="list-decimal list-inside space-y-1">
+                                    <li>Tests für Markdown Parsing</li>
+                                    <li>Tests für TOC Generation</li>
+                                    <li>Tests für Reading Time Calculation</li>
+                                    <li>Implementation aller Features</li>
+                                    <li>Verifizierung: 87% Coverage ✅</li>
+                                </ol>
+                            </div>
                         </div>
                         <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-4 mt-4">
                             <p class="text-sm font-bold text-green-600">
-                                ⏱️ Zeit: 15-30 Minuten statt 2-3 Stunden
+                                ✅ Ergebnis: Feature komplett in 20 Minuten
+                            </p>
+                            <p class="text-xs text-muted-foreground mt-1">
+                                Statt 2-3 Stunden manuell. Inkl. Tests und Best Practices.
                             </p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Szenario 2: Bug Fix -->
                 <div class="card p-8 rounded-lg">
-                    <h3 class="text-xl font-bold mb-4">Szenario 2: Bug Fix</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-primary font-bold">Du:</span>
-                            <p class="text-sm flex-1">
-                                "User können sich nicht einloggen, error:
-                                'TypeError: Cannot read property uid of undefined'"
-                            </p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-green-600 font-bold">Claude:</span>
-                            <div class="text-sm flex-1 text-muted-foreground space-y-1">
-                                <p>✅ Analysiert Error</p>
-                                <p>✅ Findet betroffenen Code (auth/login.ts:42)</p>
-                                <p>✅ Identifiziert Root Cause (Supabase Response Format geändert)</p>
-                                <p>✅ Schreibt Test der den Bug reproduziert</p>
-                                <p>✅ Fixt Code</p>
-                                <p>✅ Verifiziert dass Test grün ist</p>
-                            </div>
-                        </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">Szenario 2: Production Bug Fix</h3>
+                        <span class="badge-primary badge">⏱️ 10-15 Min</span>
                     </div>
-                </div>
-
-                <div class="card p-8 rounded-lg">
-                    <h3 class="text-xl font-bold mb-4">Szenario 3: Performance Optimization</h3>
                     <div class="space-y-4">
                         <div class="flex items-start gap-3">
-                            <span class="text-primary font-bold">Du:</span>
+                            <span class="text-primary font-bold w-16">Du:</span>
                             <p class="text-sm flex-1">
-                                "Die User-List Page ist super langsam mit 1000+ Users"
+                                "User können sich nicht einloggen. Error:
+                                'TypeError: Cannot read property uid of undefined in auth/login.ts:42'"
                             </p>
                         </div>
                         <div class="flex items-start gap-3">
-                            <span class="text-green-600 font-bold">Claude:</span>
+                            <span class="text-green-600 font-bold w-16">Claude:</span>
                             <div class="text-sm flex-1 text-muted-foreground space-y-2">
-                                <p>✅ Analysiert Component</p>
-                                <div class="bg-destructive/10 border border-destructive/20 rounded p-3 space-y-1">
-                                    <p class="font-medium">Probleme:</p>
-                                    <p>• Re-renders bei jedem Keystroke</p>
-                                    <p>• Keine Virtualisierung</p>
-                                    <p>• Filtering im Render</p>
+                                <div>
+                                    <p class="font-bold">1. Error Analyse (2 min):</p>
+                                    <pre class="text-xs mt-1">// Liest auth/login.ts:42
+const user = response.data.uid // ❌ undefined
+
+// Root Cause: Supabase Response Format geändert
+// War: response.data.uid
+// Jetzt: response.data.user.id</pre>
                                 </div>
-                                <div class="bg-green-500/10 border border-green-500/20 rounded p-3 space-y-1">
-                                    <p class="font-medium">Lösungen:</p>
-                                    <p>• useMemo für gefilterte Liste</p>
-                                    <p>• TanStack Virtual für Liste</p>
-                                    <p>• Debounced Search</p>
-                                    <p>• Pagination/Infinite Scroll</p>
+                                <div>
+                                    <p class="font-bold">2. Test schreiben (3 min):</p>
+                                    <pre class="text-xs mt-1">it('handles new Supabase format', async () => {
+  const response = {
+    data: { user: { id: '123' } }
+  }
+  const uid = getUserId(response)
+  expect(uid).toBe('123')
+})</pre>
+                                </div>
+                                <div>
+                                    <p class="font-bold">3. Fix implementieren (2 min):</p>
+                                    <pre class="text-xs mt-1">// ✅ Fixed
+const user = response.data?.user?.id || null</pre>
+                                </div>
+                                <div>
+                                    <p class="font-bold">4. Verifizieren (2 min):</p>
+                                    <pre class="text-xs mt-1">✅ Tests passing
+✅ Build success
+✅ Manual test: Login works</pre>
                                 </div>
                             </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-4 mt-4">
+                            <p class="text-sm font-bold text-green-600">
+                                ✅ Bug gefixt in 12 Minuten
+                            </p>
+                            <p class="text-xs text-muted-foreground mt-1">
+                                Mit Test der den Bug reproduziert + verhindert dass er wiederkommt
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Szenario 3: Performance -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">Szenario 3: Performance Optimization</h3>
+                        <span class="badge-primary badge">⏱️ 20-30 Min</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary font-bold w-16">Du:</span>
+                            <p class="text-sm flex-1">
+                                "Die User-List Page ist super langsam mit 1000+ Users.
+                                React DevTools zeigt excessive re-renders."
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold w-16">Claude:</span>
+                            <div class="text-sm flex-1 text-muted-foreground space-y-3">
+                                <div>
+                                    <p class="font-bold">Analyse (5 min):</p>
+                                    <div class="bg-destructive/10 border border-destructive/20 rounded p-3 space-y-1">
+                                        <p class="font-medium">Probleme gefunden:</p>
+                                        <p>• Re-renders bei jedem Keystroke (no debounce)</p>
+                                        <p>• Filtering im Render (O(n) every render)</p>
+                                        <p>• Keine Virtualisierung (rendert 1000+ DOM nodes)</p>
+                                        <p>• Missing Memoization</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Lösungen (15 min):</p>
+                                    <div class="bg-green-500/10 border border-green-500/20 rounded p-3 space-y-2">
+                                        <div>
+                                            <p class="font-medium">1. Debounced Search:</p>
+                                            <pre class="text-xs">const debouncedQuery = useDebounce(searchQuery, 500)</pre>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">2. Memoized Filtering:</p>
+                                            <pre class="text-xs">const filtered = useMemo(() =>
+  users.filter(u => u.name.includes(query)),
+  [users, query]
+)</pre>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">3. Virtual List:</p>
+                                            <pre class="text-xs">import { useVirtualizer } from '@tanstack/react-virtual'
+// Rendert nur sichtbare Items (~10-20)</pre>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">4. Pagination Fallback:</p>
+                                            <pre class="text-xs">const paginated = filtered.slice(0, 50)</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Vorher → Nachher:</p>
+                                    <pre class="text-xs">First Render: 2.8s → 0.3s (-89%)
+Re-render: 850ms → 12ms (-98%)
+DOM Nodes: 1000+ → 20 (-98%)</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-4 mt-4">
+                            <p class="text-sm font-bold text-green-600">
+                                ✅ Performance: 89% faster
+                            </p>
+                            <p class="text-xs text-muted-foreground mt-1">
+                                Mit Tests für alle Optimierungen + Lighthouse Score: 98/100
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Szenario 4: API Integration -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">Szenario 4: Externe API Integration</h3>
+                        <span class="badge-primary badge">⏱️ 25-35 Min</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary font-bold w-16">Du:</span>
+                            <p class="text-sm flex-1">
+                                "Integriere OpenAI API für Semantic Search über Markets.
+                                Generate Embeddings → Store in Redis → Vector Search."
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold w-16">Claude:</span>
+                            <div class="text-sm flex-1 text-muted-foreground space-y-2">
+                                <p class="font-bold">Implementation Plan:</p>
+                                <ol class="list-decimal list-inside space-y-1">
+                                    <li>lib/openai.ts: generateEmbedding(text)</li>
+                                    <li>lib/redis.ts: storeVector(), searchSimilar()</li>
+                                    <li>app/api/search/route.ts: Endpoint</li>
+                                    <li>Tests: Unit + Integration + E2E</li>
+                                    <li>Error Handling + Fallback</li>
+                                </ol>
+
+                                <p class="font-bold mt-3">Tests First:</p>
+                                <pre class="text-xs">// Unit: Embedding Generation
+it('generates 1536-dim embedding', async () => {
+  const embedding = await generateEmbedding('test')
+  expect(embedding).toHaveLength(1536)
+})
+
+// Integration: Vector Search
+it('finds similar markets', async () => {
+  const results = await searchMarkets('election')
+  expect(results[0].name).toContain('Trump')
+})
+
+// Fallback: Redis Down
+it('falls back to substring search', async () => {
+  jest.spyOn(redis, 'search').mockRejectedValue(new Error())
+  const results = await searchMarkets('test')
+  expect(results.fallback).toBe(true)
+})</pre>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-4 mt-4">
+                            <p class="text-sm font-bold text-green-600">
+                                ✅ API Integration komplett in 30 Minuten
+                            </p>
+                            <p class="text-xs text-muted-foreground mt-1">
+                                Mit Error Handling, Fallback, Tests & Monitoring
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Szenario 5: Refactoring -->
+                <div class="card p-8 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold">Szenario 5: Legacy Code Refactoring</h3>
+                        <span class="badge-primary badge">⏱️ 20-40 Min</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary font-bold w-16">Du:</span>
+                            <p class="text-sm flex-1">
+                                "Der MarketCard Component ist 300 Zeilen, schwer zu testen,
+                                und hat 5 verschiedene Responsibilities. Refactor bitte."
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold w-16">Claude:</span>
+                            <div class="text-sm flex-1 text-muted-foreground space-y-3">
+                                <div>
+                                    <p class="font-bold">Analyse:</p>
+                                    <pre class="text-xs">// Code Smells gefunden:
+- 300 lines (>200 limit)
+- 5 responsibilities (SRP violation)
+- Deep nesting (7 levels)
+- Duplicate logic
+- Hard to test
+
+// Vorschlag: Split in 5 Components
+1. MarketCard (Container) - 50 lines
+2. MarketHeader - 30 lines
+3. MarketStats - 40 lines
+4. MarketChart - 60 lines
+5. MarketActions - 35 lines</pre>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Refactoring (mit Tests!):</p>
+                                    <ol class="list-decimal list-inside space-y-1">
+                                        <li>Schreibe Tests für existierendes Behavior</li>
+                                        <li>Extrahiere Components</li>
+                                        <li>Verifiziere Tests bleiben grün</li>
+                                        <li>Entferne Duplikation</li>
+                                        <li>Add Missing Tests</li>
+                                    </ol>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Vorher → Nachher:</p>
+                                    <pre class="text-xs">Lines: 300 → 50 (Container) + 5 x ~40
+Responsibilities: 5 → 1 per component
+Nesting: 7 levels → 2 levels
+Test Coverage: 20% → 85%
+Maintainability: LOW → HIGH</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-4 mt-4">
+                            <p class="text-sm font-bold text-green-600">
+                                ✅ Refactoring komplett in 35 Minuten
+                            </p>
+                            <p class="text-xs text-muted-foreground mt-1">
+                                Tests schützen vor Regression. Code ist jetzt maintainable.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -680,7 +3130,7 @@ Claude implementiert in Minuten!</pre>
     </section>
 
     <!-- Git Workflow Section -->
-    <section class="py-20 px-4">
+    <section id="git" class="py-20 px-4">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-4xl font-bold mb-12 text-center">🔄 Private Fork Workflow</h2>
 
@@ -750,12 +3200,12 @@ my-rules/        ← Deine custom rules</pre>
         </div>
     </section>
 
-    <!-- Best Practices Section -->
+    <!-- Best Practices Section - ERWEITERT -->
     <section class="py-20 px-4 bg-muted/50">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold mb-12 text-center">✨ Best Practices</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center">✨ Best Practices (Erweitert)</h2>
 
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
                 <div class="card p-6 rounded-lg space-y-4">
                     <h3 class="text-xl font-bold flex items-center gap-2">
                         <span class="text-2xl">✅</span> DO
@@ -779,7 +3229,19 @@ my-rules/        ← Deine custom rules</pre>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-green-600 mt-1">•</span>
-                            <span>MCPs aufräumen (< 10 aktiv)</span>
+                            <span>MCPs aufräumen (< 5-7 aktiv)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 mt-1">•</span>
+                            <span>Tests BEFORE Code (TDD immer!)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 mt-1">•</span>
+                            <span>Code Reviews vor jedem Commit</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 mt-1">•</span>
+                            <span>Session Memory mit Stop Hook speichern</span>
                         </li>
                     </ul>
                 </div>
@@ -799,7 +3261,7 @@ my-rules/        ← Deine custom rules</pre>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-destructive mt-1">•</span>
-                            <span>Alle MCPs gleichzeitig aktivieren</span>
+                            <span>Alle MCPs gleichzeitig aktivieren (Context!)</span>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="text-destructive mt-1">•</span>
@@ -809,35 +3271,53 @@ my-rules/        ← Deine custom rules</pre>
                             <span class="text-destructive mt-1">•</span>
                             <span>Ungetestete Features deployen</span>
                         </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-destructive mt-1">•</span>
+                            <span>Code ohne Review committen</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-destructive mt-1">•</span>
+                            <span>10+ MCPs gleichzeitig laden</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-destructive mt-1">•</span>
+                            <span>Production ohne Tests deployen</span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="card p-8 rounded-lg mt-8">
-                <h3 class="text-xl font-bold mb-4">🎓 Learning Path</h3>
+            <div class="card p-8 rounded-lg">
+                <h3 class="text-xl font-bold mb-4">🎓 Learning Path (4 Wochen)</h3>
                 <div class="grid md:grid-cols-4 gap-4">
                     <div class="space-y-2">
                         <div class="badge-primary badge">Woche 1</div>
                         <p class="text-sm font-medium">Basics</p>
                         <ul class="text-xs text-muted-foreground space-y-1">
                             <li>• Commands lernen</li>
-                            <li>• Erstes Feature</li>
+                            <li>• Erstes Feature mit /plan + /tdd</li>
+                            <li>• Git Workflow verstehen</li>
+                            <li>• Shadcn Components nutzen</li>
                         </ul>
                     </div>
                     <div class="space-y-2">
                         <div class="badge-primary badge">Woche 2</div>
-                        <p class="text-sm font-medium">Shadcn Mastery</p>
+                        <p class="text-sm font-medium">Agents & Skills</p>
                         <ul class="text-xs text-muted-foreground space-y-1">
-                            <li>• Workflows</li>
-                            <li>• Components</li>
+                            <li>• Alle Agents ausprobieren</li>
+                            <li>• Skills verstehen</li>
+                            <li>• Eigene Skills erstellen</li>
+                            <li>• Workflow optimieren</li>
                         </ul>
                     </div>
                     <div class="space-y-2">
                         <div class="badge-primary badge">Woche 3</div>
                         <p class="text-sm font-medium">Advanced</p>
                         <ul class="text-xs text-muted-foreground space-y-1">
-                            <li>• Eigene Skills</li>
-                            <li>• Memory</li>
+                            <li>• Hooks einrichten</li>
+                            <li>• Memory Persistence</li>
+                            <li>• MCPs smart nutzen</li>
+                            <li>• Context Management</li>
                         </ul>
                     </div>
                     <div class="space-y-2">
@@ -845,8 +3325,681 @@ my-rules/        ← Deine custom rules</pre>
                         <p class="text-sm font-medium">Expert</p>
                         <ul class="text-xs text-muted-foreground space-y-1">
                             <li>• Token Optimization</li>
-                            <li>• Subagents</li>
+                            <li>• Continuous Learning</li>
+                            <li>• Custom Agents bauen</li>
+                            <li>• Komplette Automation</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-8 rounded-lg mt-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-purple-500/20">
+                <h3 class="text-2xl font-bold mb-4">🚀 Pro-Tipps für Produktivität</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="text-sm font-bold mb-2">Context Window Management:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>Nutze max 5-7 MCPs gleichzeitig</li>
+                            <li>CLI + Skills statt MCPs wo möglich</li>
+                            <li>PreCompact Hook für State Backup</li>
+                            <li>Regelmäßig Context monitoren</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold mb-2">Memory Persistence:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>Stop Hook für Session Summary</li>
+                            <li>Speichere in .claude/sessions/</li>
+                            <li>Lade Context in neuer Session</li>
+                            <li>Kein Context Loss zwischen Sessions!</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold mb-2">Continuous Learning:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>Neue Patterns → Skills speichern</li>
+                            <li>Learnings dokumentieren</li>
+                            <li>Automatisch laden in next Session</li>
+                            <li>Weniger Wiederholungen!</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold mb-2">Workflow Automation:</p>
+                        <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                            <li>Commands für repetitive Tasks</li>
+                            <li>Hooks für Auto-Formatting</li>
+                            <li>Agents für komplexe Aufgaben</li>
+                            <li>Skills für Domain Knowledge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Token Optimization Section -->
+    <section id="tokens" class="py-20 px-4 bg-muted/50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">💰 Token-Optimierung & Kosten sparen</h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Moderne Strategien um 50-70% Tokens zu sparen ohne Qualitätsverlust
+                </p>
+            </div>
+
+            <!-- Overview Cards -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="card p-6 rounded-lg text-center">
+                    <div class="text-4xl mb-3">📊</div>
+                    <h3 class="text-2xl font-bold mb-2">50-70%</h3>
+                    <p class="text-sm text-muted-foreground">
+                        Token-Ersparnis mit richtiger Model Selection
+                    </p>
+                </div>
+                <div class="card p-6 rounded-lg text-center">
+                    <div class="text-4xl mb-3">⚡</div>
+                    <h3 class="text-2xl font-bold mb-2">3-5x</h3>
+                    <p class="text-sm text-muted-foreground">
+                        Schnellere Responses mit Haiku für simple Tasks
+                    </p>
+                </div>
+                <div class="card p-6 rounded-lg text-center">
+                    <div class="text-4xl mb-3">💎</div>
+                    <h3 class="text-2xl font-bold mb-2">200k → 180k</h3>
+                    <p class="text-sm text-muted-foreground">
+                        Context Window durch MCP Cleanup
+                    </p>
+                </div>
+            </div>
+
+            <!-- Strategy 1: Model Selection -->
+            <div class="card p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-3xl">🎯</span>
+                    Strategy #1: Intelligente Model Selection
+                </h3>
+                <p class="text-muted-foreground mb-6">
+                    Das richtige Model für jeden Task spart massiv Tokens und Kosten.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="badge bg-green-600 text-white">Haiku</span>
+                                <span class="text-sm font-bold">$0.25 / 1M tokens</span>
+                            </div>
+                            <p class="text-sm font-medium mb-2">Perfekt für:</p>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• File Search (Glob, Grep)</li>
+                                <li>• Einfache Edits (1-2 Files)</li>
+                                <li>• Docs schreiben</li>
+                                <li>• Simple Refactorings</li>
+                                <li>• Code Formatting</li>
+                            </ul>
+                            <div class="mt-4 text-sm">
+                                <span class="font-bold text-green-600">⚡ 3-5x schneller</span>
+                                <br>
+                                <span class="text-xs text-muted-foreground">als Sonnet/Opus</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="badge bg-blue-600 text-white">Sonnet</span>
+                                <span class="text-sm font-bold">$3 / 1M tokens</span>
+                            </div>
+                            <p class="text-sm font-medium mb-2">Perfekt für:</p>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Multi-File Features</li>
+                                <li>• TDD Implementation</li>
+                                <li>• Code Review</li>
+                                <li>• Bug Fixing</li>
+                                <li>• API Integration</li>
+                            </ul>
+                            <div class="mt-4 text-sm">
+                                <span class="font-bold text-blue-600">⚖️ Best Balance</span>
+                                <br>
+                                <span class="text-xs text-muted-foreground">Quality/Cost/Speed</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="badge bg-purple-600 text-white">Opus</span>
+                                <span class="text-sm font-bold">$15 / 1M tokens</span>
+                            </div>
+                            <p class="text-sm font-medium mb-2">Perfekt für:</p>
+                            <ul class="text-sm text-muted-foreground space-y-1">
+                                <li>• Komplexe Architektur</li>
+                                <li>• Security Analysis</li>
+                                <li>• System Design</li>
+                                <li>• Schwierige Bugs</li>
+                                <li>• 5+ File Changes</li>
+                            </ul>
+                            <div class="mt-4 text-sm">
+                                <span class="font-bold text-purple-600">🧠 Maximum Reasoning</span>
+                                <br>
+                                <span class="text-xs text-muted-foreground">Wenn Qualität kritisch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6">
+                        <h4 class="font-bold mb-3">💡 Praktisches Beispiel</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <p class="text-sm font-medium mb-2">❌ Ohne Optimization:</p>
+                                <pre class="text-xs">Task: Simple Typo Fix
+Model: Opus (default)
+Tokens: 50k
+Cost: $0.75</pre>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium mb-2">✅ Mit Optimization:</p>
+                                <pre class="text-xs">Task: Simple Typo Fix
+Model: Haiku (delegiert)
+Tokens: 5k
+Cost: $0.0125
+
+💰 Ersparnis: 98%!</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy 2: Context Window Management -->
+            <div class="card p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-3xl">📏</span>
+                    Strategy #2: Context Window Management
+                </h3>
+                <p class="text-muted-foreground mb-6">
+                    200k Context Window optimal nutzen - mehr verfügbarer Context = bessere Ergebnisse.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <h4 class="font-bold">🔴 Context Killer</h4>
+                            <div class="space-y-3">
+                                <div class="bg-destructive/10 border border-destructive/20 rounded p-3">
+                                    <p class="text-sm font-medium mb-1">Zu viele MCPs aktiv</p>
+                                    <p class="text-xs text-muted-foreground">Jedes MCP = 500-2000 Tokens für Tool-Definitionen</p>
+                                    <p class="text-xs font-bold text-destructive mt-1">-30k Context mit 15 MCPs!</p>
+                                </div>
+                                <div class="bg-destructive/10 border border-destructive/20 rounded p-3">
+                                    <p class="text-sm font-medium mb-1">Mega-Files im Codebase</p>
+                                    <p class="text-xs text-muted-foreground">1000+ Zeilen Files brennen Context</p>
+                                    <p class="text-xs font-bold text-destructive mt-1">-20k Context pro File!</p>
+                                </div>
+                                <div class="bg-destructive/10 border border-destructive/20 rounded p-3">
+                                    <p class="text-sm font-medium mb-1">Alle Plugins gleichzeitig</p>
+                                    <p class="text-xs text-muted-foreground">Plugins laden Tools auch wenn nicht benutzt</p>
+                                    <p class="text-xs font-bold text-destructive mt-1">-10k Context!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h4 class="font-bold">✅ Context Saver</h4>
+                            <div class="space-y-3">
+                                <div class="bg-green-500/10 border border-green-500/20 rounded p-3">
+                                    <p class="text-sm font-medium mb-1">< 10 MCPs aktiv</p>
+                                    <p class="text-xs text-muted-foreground">Nur aktivieren was heute gebraucht wird</p>
+                                    <p class="text-xs font-bold text-green-600 mt-1">+30k Context!</p>
+                                </div>
+                                <div class="bg-green-500/10 border border-green-500/20 rounded p-3">
+                                    <p class="text-sm font-medium mb-1">Modularer Code</p>
+                                    <p class="text-xs text-muted-foreground">Files < 300 Zeilen, klare Separation</p>
+                                    <p class="text-xs font-bold text-green-600 mt-1">+20k Context!</p>
+                                </div>
+                                <div class="bg-green-500/10 border border-green-500/20 rounded p-3">
+                                    <p class="text-sm font-medium mb-1">Lazy Loading</p>
+                                    <p class="text-xs text-muted-foreground">Tools nur laden wenn benutzt (2026 Feature)</p>
+                                    <p class="text-xs font-bold text-green-600 mt-1">+10k Context!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6">
+                        <h4 class="font-bold mb-3">🎯 Quick Wins</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <pre class="text-xs mb-2"># Context Check
+/statusline
+
+# Zeigt: ctx:65%</pre>
+                                <p class="text-xs text-muted-foreground">Immer im Blick behalten!</p>
+                            </div>
+                            <div>
+                                <pre class="text-xs mb-2"># MCPs aufräumen
+/mcp
+
+# Deaktiviere unused
+# Ziel: < 80 Tools total</pre>
+                                <p class="text-xs text-muted-foreground">Wöchentlich checken!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy 3: Tool Optimization -->
+            <div class="card p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-3xl">🔧</span>
+                    Strategy #3: Tool-spezifische Optimierung
+                </h3>
+                <p class="text-muted-foreground mb-6">
+                    Die richtigen Tools nutzen spart 30-50% Tokens.
+                </p>
+
+                <div class="space-y-4">
+                    <div class="card bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20 p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-600 text-white px-3 py-1 rounded font-bold text-sm">NEU 2026</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold mb-2">mgrep statt grep</h4>
+                                <p class="text-sm text-muted-foreground mb-3">
+                                    Mixedbread's mgrep ist 2x token-effizienter als ripgrep/grep
+                                </p>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <p class="text-xs font-medium mb-1">Alte Methode (grep):</p>
+                                        <pre class="text-xs">Grep: "function handleSubmit"
+Tokens: ~15k
+Zeit: 2-3s</pre>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-medium mb-1">Neue Methode (mgrep):</p>
+                                        <pre class="text-xs">mgrep: "function handleSubmit"
+Tokens: ~7k (-53%!)
+Zeit: 1s</pre>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <code class="text-xs">claude plugin add mgrep@Mixedbread-Grep</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="card p-6">
+                            <h4 class="font-bold mb-3">Read statt Cat</h4>
+                            <p class="text-sm text-muted-foreground mb-3">
+                                Read Tool mit Offsets statt ganzes File
+                            </p>
+                            <pre class="text-xs">// ❌ Inefficient
+cat large-file.ts (5000 lines)
+Tokens: 50k
+
+// ✅ Efficient
+Read(file, offset: 100, limit: 50)
+Tokens: 5k</pre>
+                        </div>
+
+                        <div class="card p-6">
+                            <h4 class="font-bold mb-3">Glob statt Find</h4>
+                            <p class="text-sm text-muted-foreground mb-3">
+                                Glob Tool statt bash find command
+                            </p>
+                            <pre class="text-xs">// ❌ Inefficient
+bash: find . -name "*.tsx"
+Tokens: 10k
+
+// ✅ Efficient
+Glob: "**/*.tsx"
+Tokens: 2k</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy 4: Subagent Delegation -->
+            <div class="card p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-3xl">🤖</span>
+                    Strategy #4: Subagent Delegation
+                </h3>
+                <p class="text-muted-foreground mb-6">
+                    Main Agent (Opus) delegiert an Subagents (Haiku/Sonnet) - spart 60% Tokens!
+                </p>
+
+                <div class="space-y-6">
+                    <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6">
+                        <h4 class="font-bold mb-4">Das Delegation Pattern</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-purple-600 text-white px-3 py-1 rounded font-bold text-sm flex-shrink-0">Main (Opus)</div>
+                                <div class="flex-1">
+                                    <p class="text-sm">Orchestriert, trifft Entscheidungen, delegiert Tasks</p>
+                                    <p class="text-xs text-muted-foreground mt-1">Tokens: Nur für Coordination (5-10k)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-2xl">↓</span>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-green-600 text-white px-3 py-1 rounded font-bold text-sm flex-shrink-0">Search (Haiku)</div>
+                                <div class="flex-1">
+                                    <p class="text-sm">Findet Files, sucht Code, sammelt Infos</p>
+                                    <p class="text-xs text-muted-foreground mt-1">Tokens: 2-5k, 5x schneller</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-600 text-white px-3 py-1 rounded font-bold text-sm flex-shrink-0">Implementation (Sonnet)</div>
+                                <div class="flex-1">
+                                    <p class="text-sm">Baut Features, schreibt Tests, macht Refactorings</p>
+                                    <p class="text-xs text-muted-foreground mt-1">Tokens: 20-40k, beste Balance</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-purple-600 text-white px-3 py-1 rounded font-bold text-sm flex-shrink-0">Review (Opus)</div>
+                                <div class="flex-1">
+                                    <p class="text-sm">Prüft Security, Architektur, komplexe Logik</p>
+                                    <p class="text-xs text-muted-foreground mt-1">Tokens: 10-20k, wenn nötig</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold mb-3">❌ Ohne Delegation</h4>
+                            <pre class="text-sm">1 Opus Agent macht alles:
+- Search: 10k tokens
+- Implementation: 60k tokens
+- Review: 15k tokens
+
+Total: 85k tokens
+Cost: $1.28</pre>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-3">✅ Mit Delegation</h4>
+                            <pre class="text-sm">Opus orchestriert (5k)
+→ Haiku sucht (2k)
+→ Sonnet implementiert (30k)
+→ Opus reviewed (10k)
+
+Total: 47k tokens (-45%!)
+Cost: $0.52 (-59%!)</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy 5: CLI + Skills statt MCPs -->
+            <div class="card p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-3xl">⚙️</span>
+                    Strategy #5: CLI + Skills statt MCPs
+                </h3>
+                <p class="text-muted-foreground mb-6">
+                    MCPs sind praktisch, aber brennen Context. CLI + Skills sind oft besser!
+                </p>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-destructive/10 border border-destructive/20 rounded-lg p-6">
+                            <h4 class="font-bold mb-3">❌ GitHub MCP</h4>
+                            <pre class="text-xs mb-3">Context Usage:
+- Tool Definitions: 2500 tokens
+- Always loaded
+- Pro: Bequem
+
+Cost pro Session: 2500 tokens</pre>
+                            <p class="text-sm text-muted-foreground">Bei 10 Sessions/Tag = 25k tokens nur für Tool-Def!</p>
+                        </div>
+
+                        <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-6">
+                            <h4 class="font-bold mb-3">✅ gh CLI + Skill</h4>
+                            <pre class="text-xs mb-3">Context Usage:
+- Tool Definitions: 0 tokens
+- Command in Skill: 100 tokens
+- Pro: Zero Context Cost
+
+Cost pro Session: 100 tokens</pre>
+                            <p class="text-sm text-green-600 font-bold">96% weniger Tokens!</p>
+                        </div>
+                    </div>
+
+                    <div class="card p-6">
+                        <h4 class="font-bold mb-3">Beispiel: GitHub Operations ohne MCP</h4>
+                        <pre class="text-sm">// commands/gh-pr.md
+---
+name: gh-pr
+description: Create Pull Request with gh CLI
+---
+
+Execute:
+1. gh pr create --title "$title" --body "$body"
+2. Return PR URL
+
+// Statt GitHub MCP: 0 Context Cost!</pre>
+                    </div>
+
+                    <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6">
+                        <h4 class="font-bold mb-3">💡 Wann CLI + Skills nutzen?</h4>
+                        <ul class="text-sm space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600">✓</span>
+                                <span><strong>GitHub:</strong> gh CLI statt GitHub MCP (-2500 tokens)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600">✓</span>
+                                <span><strong>Supabase:</strong> supabase CLI statt Supabase MCP (-1800 tokens)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600">✓</span>
+                                <span><strong>Vercel:</strong> vercel CLI statt Vercel MCP (-1500 tokens)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600">✓</span>
+                                <span><strong>Railway:</strong> railway CLI statt Railway MCP (-1200 tokens)</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-muted-foreground mt-4">
+                            <strong>Total savings:</strong> ~7000 tokens pro Session nur durch CLI + Skills!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy 6: Modular Codebase -->
+            <div class="card p-8 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-3xl">📦</span>
+                    Strategy #6: Modularer Codebase = Weniger Tokens
+                </h3>
+                <p class="text-muted-foreground mb-6">
+                    Kleine, fokussierte Files brennen weniger Context und sind leichter zu verstehen.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-destructive/10 border border-destructive/20 rounded-lg p-6">
+                            <h4 class="font-bold mb-3">❌ Monolithische Files</h4>
+                            <pre class="text-xs">// components/Dashboard.tsx (1500 lines)
+- 10 Components in 1 File
+- 500 lines Business Logic
+- Alles eng gekoppelt
+
+Read File: 18k tokens
+Edit: 25k tokens (ganzes File)
+Review: 20k tokens
+
+Total: 63k tokens/Edit</pre>
+                        </div>
+
+                        <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-6">
+                            <h4 class="font-bold mb-3">✅ Modulare Files</h4>
+                            <pre class="text-xs">// components/dashboard/
+  DashboardLayout.tsx (120 lines)
+  StatsCard.tsx (80 lines)
+  UserTable.tsx (150 lines)
+  ...
+
+Read File: 2k tokens
+Edit: 3k tokens (nur 1 File)
+Review: 2.5k tokens
+
+Total: 7.5k tokens/Edit (-88%!)</pre>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6">
+                        <h4 class="font-bold mb-4">🎯 Best Practices für modularen Code</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <p class="text-sm font-bold mb-2">File Size Limits:</p>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Components: < 200 Zeilen</li>
+                                    <li>• Utils: < 150 Zeilen</li>
+                                    <li>• API Routes: < 100 Zeilen</li>
+                                    <li>• Types: < 300 Zeilen</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold mb-2">Separation of Concerns:</p>
+                                <ul class="text-sm space-y-1">
+                                    <li>• UI Components getrennt</li>
+                                    <li>• Business Logic in Hooks</li>
+                                    <li>• API Calls in Services</li>
+                                    <li>• Types in types/</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-6">
+                        <h4 class="font-bold mb-3">Praktisches Beispiel: Refactoring</h4>
+                        <pre class="text-sm">// Vorher: 1 File (1200 lines)
+components/UserManagement.tsx
+
+// Nachher: 8 Files
+components/user-management/
+  UserManagementPage.tsx (80 lines)
+  UserTable.tsx (150 lines)
+  UserForm.tsx (120 lines)
+  UserFilters.tsx (90 lines)
+  hooks/useUsers.ts (100 lines)
+  hooks/useUserFilters.ts (60 lines)
+  services/userService.ts (120 lines)
+  types/user.ts (80 lines)
+
+// Token-Ersparnis bei Edits: 75%+</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real-World Savings -->
+            <div class="card p-8 rounded-lg bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-500/20">
+                <h3 class="text-2xl font-bold mb-6 text-center">💰 Real-World Savings</h3>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h4 class="font-bold mb-4 text-center">Vorher (Keine Optimization)</h4>
+                        <div class="space-y-3">
+                            <div class="bg-background/50 rounded p-3">
+                                <p class="text-sm"><strong>Models:</strong> Nur Opus</p>
+                                <p class="text-xs text-muted-foreground">Alles mit teurstem Model</p>
+                            </div>
+                            <div class="bg-background/50 rounded p-3">
+                                <p class="text-sm"><strong>MCPs:</strong> 15 aktiv</p>
+                                <p class="text-xs text-muted-foreground">-30k Context Window</p>
+                            </div>
+                            <div class="bg-background/50 rounded p-3">
+                                <p class="text-sm"><strong>Tools:</strong> grep, find, cat</p>
+                                <p class="text-xs text-muted-foreground">Alte ineffiziente Tools</p>
+                            </div>
+                            <div class="bg-background/50 rounded p-3">
+                                <p class="text-sm"><strong>Codebase:</strong> Große Files</p>
+                                <p class="text-xs text-muted-foreground">1000+ Zeilen Components</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-4 bg-destructive/20 rounded text-center">
+                            <p class="text-2xl font-bold">$45/Tag</p>
+                            <p class="text-sm text-muted-foreground">~1.5M Tokens</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-4 text-center">Nachher (Full Optimization)</h4>
+                        <div class="space-y-3">
+                            <div class="bg-background/50 rounded p-3">
+                                <p class="text-sm"><strong>Models:</strong> Haiku/Sonnet/Opus</p>
+                                <p class="text-xs text-muted-foreground">Right tool for right job</p>
+                            </div>
+                            <div class="bg-background/50 rounded p-3">
+                                <p class="text-sm"><strong>MCPs:</strong> 6 aktiv</p>
+                                <p class="text-xs text-muted-foreground">+30k Context Window</p>
+                            </div>
+                            <div class="bg-background/50 rounded p-3">
+                                <p class="text-sm"><strong>Tools:</strong> mgrep, Glob, Read</p>
+                                <p class="text-xs text-muted-foreground">Optimierte neue Tools</p>
+                            </div>
+                            <div class="bg-background/50 rounded p-3">
+                                <p class="text-sm"><strong>Codebase:</strong> Modulare Files</p>
+                                <p class="text-xs text-muted-foreground">< 200 Zeilen Components</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-4 bg-green-600/20 rounded text-center">
+                            <p class="text-2xl font-bold text-green-600">$12/Tag</p>
+                            <p class="text-sm text-muted-foreground">~450k Tokens</p>
+                            <p class="text-xl font-bold text-green-600 mt-2">-73% Kosten! 🎉</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-xl font-bold mb-2">Jährliche Ersparnis: $12,045</p>
+                    <p class="text-sm text-muted-foreground">Bei täglicher Nutzung</p>
+                </div>
+            </div>
+
+            <!-- Quick Action Plan -->
+            <div class="card p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-6 text-center">🚀 Dein Token-Optimierung Action Plan</h3>
+
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                        <div class="flex-1">
+                            <h4 class="font-bold">Heute (15 Min)</h4>
+                            <ul class="text-sm text-muted-foreground mt-2 space-y-1">
+                                <li>• <code>/mcp</code> ausführen, < 10 MCPs behalten</li>
+                                <li>• <code>/statusline</code> setup für Context Monitoring</li>
+                                <li>• mgrep Plugin installieren</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                        <div class="flex-1">
+                            <h4 class="font-bold">Diese Woche</h4>
+                            <ul class="text-sm text-muted-foreground mt-2 space-y-1">
+                                <li>• Subagents mit verschiedenen Models konfigurieren</li>
+                                <li>• CLI + Skills für GitHub/Supabase/Vercel setup</li>
+                                <li>• Größte Files identifizieren und refactoren</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                        <div class="flex-1">
+                            <h4 class="font-bold">Diesen Monat</h4>
+                            <ul class="text-sm text-muted-foreground mt-2 space-y-1">
+                                <li>• Code Style Guide: File Size Limits definieren</li>
+                                <li>• Monitoring: Token Usage tracken</li>
+                                <li>• Optimization Reviews: Wöchentlich Context checken</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -902,6 +4055,7 @@ my-rules/        ← Deine custom rules</pre>
             <div class="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
                 <p>Private Fork von <a href="https://github.com/affaan-m/everything-claude-code" class="hover:text-foreground" target="_blank">affaan-m/everything-claude-code</a></p>
                 <p class="mt-2">Customized für MVP-Builder & Technical Founders</p>
+                <p class="mt-4 font-bold">~2800+ Zeilen | Agents | Skills | Hooks | MCPs | Shadcn</p>
             </div>
         </div>
     </footer>
